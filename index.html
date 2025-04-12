@@ -10,8 +10,13 @@
     <script src="auth.js"></script>
 </head>
 <body>
+    <button onclick="logoutUser()" class="btn btn-danger">Logout</button>
     <script>
         // Check authentication before loading page
+        function logoutUser() {
+    localStorage.removeItem('userInfo');
+    window.location.href = 'login.html';
+  }
         window.onload = function() {
             initAuth();
             // Rest of your onload handlers
