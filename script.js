@@ -285,7 +285,14 @@ document.addEventListener("DOMContentLoaded", () => {
       window.location.href = "login.html";
     });
   });
+  function initAuth() {
+    const userInfo = JSON.parse(localStorage.getItem('userInfo'));
 
+    if (!userInfo || !userInfo.isLoggedIn) {
+      // If no user info or not logged in, redirect to login page
+      window.location.href = 'login.html';
+    }
+  }
  
 
 
