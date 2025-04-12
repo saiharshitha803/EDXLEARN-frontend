@@ -48,7 +48,6 @@
         const data = await response.json();
         
         if (response.ok) {
-          localStorage.setItem("username", JSON.stringify(data.username));
           alert('Registration successful! Please login.');
           window.location.href = 'login.html';
         } else {
