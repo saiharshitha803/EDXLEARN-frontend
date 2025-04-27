@@ -231,6 +231,14 @@ body {
   </div>
   
  
+  <div id="welcome-box" style="text-align: center; margin: 2rem 0;">
+    <h1 style="font-size: 2.8rem; font-weight: bold; background: linear-gradient(135deg, #ff00cc, #3333ff); -webkit-background-clip: text; color: transparent;">
+      Welcome to EdxLearn 🚀
+    </h1>
+    <p style="font-size: 1.4rem; color: #555;">
+      Explore courses. Master new skills. Start your journey today! 🌟
+    </p>
+  </div>
   
 <!-- CSS -->
 <div id="css-content" class="content-box">
@@ -497,12 +505,31 @@ languagePairs.forEach(({ btnId, boxId }) => {
     optionsBox.classList.add('show');
   }
 
-  const aboutBtn = document.getElementById('about-btn');
 
-aboutBtn.addEventListener('click', () => {
-  window.location.href = 'about.html'; // <--- Redirect to your About page
+
+  document.addEventListener("DOMContentLoaded", function () {
+  const tabs = document.querySelectorAll(".tab"); // <- updated to match your structure
+  const welcomeBox = document.getElementById("welcome-box");
+
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      if (welcomeBox) {
+        welcomeBox.style.display = "none"; // Instantly hide
+      }
+    });
+  });
 });
-
+tabs.forEach(tab => {
+  tab.addEventListener("click", () => {
+    if (welcomeBox) {
+      welcomeBox.style.transition = "opacity 0.5s ease";
+      welcomeBox.style.opacity = "0";
+      setTimeout(() => {
+        welcomeBox.style.display = "none";
+      }, 500);
+    }
+  });
+});
 
 
 

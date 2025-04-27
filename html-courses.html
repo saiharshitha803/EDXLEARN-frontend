@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>HTML Courses</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <style>
         body {
             padding: 2rem;
@@ -34,27 +36,6 @@
       color: var(--text-color);
       transition: background-color 0.3s ease, color 0.3s ease;
     }
-    .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  border-bottom: 1px solid #ccc;
-  background-color: rgb(222, 37, 222);
-  color: white;
-}
-
-.header-title {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.header-buttons i {
-  font-size: 1.2rem;
-  margin-left: 1rem;
-  cursor: pointer;
-  color: var(--text-color);
-}
 
 
     
@@ -76,21 +57,62 @@
     background: linear-gradient(135deg, #ff66d9, #6666ff); /* Lighter on hover */
     transform: scale(1.05); /* Small zoom effect */
   }
+  
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #c63edc; /* Nice gradient purple */
+  color: black;
+}
+
+.header-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.header-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+}
+
+.header-buttons a, .header-buttons i {
+  color: black;
+  font-size: 1.5rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.header-buttons a:hover, .header-buttons i:hover {
+  color: #7c7b75; /* Gold hover */
+}
+
 
     </style>
 </head>
 
 <body>
     
-    <div class="header">
-        <div class="header-title">EdxLearn</div>
-        <div class="header-buttons">
-          <i class="fas fa-circle-info" title="About" id="about-btn"></i>
-          <i class="fas fa-moon" title="Toggle Theme" id="theme-toggle"></i>
-          <i class="fas fa-sign-out-alt" title="Logout"></i>
+    <body>
+
+        <!-- TOP HEADER CONTAINER -->
+        <div class="header">
+          <div class="header-title">EdxLearn</div>
+          <div class="header-buttons">
+            <a href="about.html" title="About">
+              <i class="fas fa-circle-info"></i>
+            </a>
+            <i id="theme-toggle" class="fas fa-moon" title="Toggle Theme"></i>
+            <a href="login.html" title="Logout">
+              <i class="fas fa-sign-out-alt"></i>
+            </a>
+          </div>
         </div>
-      </div>
       
+     
       
     <div class="text-center my-4">
         <button class="btn btn-outline-success filter-btn" data-type="free">Show Free Courses</button>
