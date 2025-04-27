@@ -1,0 +1,371 @@
+      
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Python Courses</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding: 2rem;
+        }
+        .course-card {
+            margin-bottom: 20px;
+        }
+        .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+  background-color: rgb(222, 37, 222); /* <-- Add this line */
+  color: white; /* Optional: Makes text/icons visible on purple */
+     }
+
+    
+
+    .header-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .header-buttons i {
+      font-size: 1.2rem;
+      margin-left: 1rem;
+      cursor: pointer;
+      color: var(--text-color);
+    }
+
+    .go-to-course-btn {
+    background: linear-gradient(135deg, #ff00cc, #3333ff); /* Pink to Purple gradient */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  .go-to-course-btn:hover {
+    background: linear-gradient(135deg, #ff66d9, #6666ff); /* Lighter on hover */
+    transform: scale(1.05); /* Small zoom effect */
+  }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-title">EdxLearn</div>
+        <div class="header-buttons">
+          <i class="fas fa-circle-info" title="About"></i>
+          <i id="theme-toggle" class="fas fa-moon" title="Toggle Theme"></i>
+          <i class="fas fa-sign-out-alt" title="Logout"></i>
+        </div>
+      </div>
+    
+    <div class="text-center my-4">
+        <button class="btn btn-outline-success filter-btn" data-type="free">Show Free Courses</button>
+        <button class="btn btn-outline-danger filter-btn" data-type="paid">Show Paid Courses</button>
+      </div>
+      
+      <h2 id="courseHeading" class="text-center mb-4">All Python Courses</h2>
+      
+      <div id="courseList" class="row">
+        <!-- All your free & paid course cards go here -->
+    
+                       
+     
+
+
+
+             <!-- Example of a Course Card -->
+<div class="col-md-3 course-card" data-category="python" data-type="free">
+    <div class="card">
+        <img src="coursera.jpeg" class="card-img-top" alt="Course Image">
+        <div class="card-body">
+            <h5 class="card-title">coursera</h5>
+            <p class="card-text">Learn the fundamentals of Python in this free course.find good results.</p>
+            <a href="https://www.coursera.org/search?query=python" class="btn go-to-course-btn">Go to Course</a>
+        </div>
+    </div>
+</div>
+
+<!-- Example of a Course Card -->
+<div class="col-md-3 course-card" data-category="python" data-type="free">
+    <div class="card">
+        <img src="edx.jpeg" class="card-img-top" alt="Course Image">
+        <div class="card-body">
+            <h5 class="card-title">edx</h5>
+            <p class="card-text">Learn the fundamentals of Python in this free course.find good results.</p>
+            <a href="https://www.edx.org/search?q=python" class="btn go-to-course-btn">Go to Course</a>
+        </div>
+    </div>
+</div>
+
+<!-- Example of a Course Card -->
+<div class="col-md-3 course-card" data-category="python" data-type="free">
+    <div class="card">
+        <img src="code.jpeg" class="card-img-top" alt="Course Image">
+        <div class="card-body">
+            <h5 class="card-title">codecademy</h5>
+            <p class="card-text">Learn the fundamentals of Python in this free course.find good results.</p>
+            <a href="https://www.codecademy.com/search?query=Python" class="btn go-to-course-btn">Go to Course</a>
+        </div>
+    </div>
+</div>
+
+<!-- Example of a Course Card -->
+<div class="col-md-3 course-card" data-category="python" data-type="free">
+    <div class="card">
+        <img src="ali.jpeg" class="card-img-top" alt="Course Image">
+        <div class="card-body">
+            <h5 class="card-title">alison</h5>
+            <p class="card-text">Learn the fundamentals of Python in this free course.find good results.</p>
+            <a href="https://alison.com/courses?query=python" class="btn go-to-course-btn">Go to Course</a>
+        </div>
+    </div>
+</div>
+
+<!-- Example of a Course Card -->
+<div class="col-md-3 course-card" data-category="python" data-type="free">
+    <div class="card">
+        <img src="hav.jpg" class="card-img-top" alt="Course Image">
+        <div class="card-body">
+            <h5 class="card-title">harvard</h5>
+            <p class="card-text">Learn the fundamentals of Python in this free course.find good results.</p>
+            <a href="https://pll.harvard.edu/catalog?keywords=python&url=" class="btn go-to-course-btn">Go to Course</a>
+        </div>
+    </div>
+</div>
+
+<!-- Example of a Course Card -->
+<div class="col-md-3 course-card" data-category="python" data-type="free">
+    <div class="card">
+        <img src="dev.avif" class="card-img-top" alt="Course Image">
+        <div class="card-body">
+            <h5 class="card-title">developers</h5>
+            <p class="card-text">Learn the fundamentals of Python in this free course.find good results.</p>
+            <a href="https://developers.google.com/edu/python" class="btn go-to-course-btn">Go to Course</a>
+        </div>
+    </div>
+</div>
+
+<!-- Example of a Course Card -->
+<div class="col-md-3 course-card" data-category="python" data-type="free">
+    <div class="card">
+        <img src="IBM.jpg" class="card-img-top" alt="Course Image">
+        <div class="card-body">
+            <h5 class="card-title">IBM</h5>
+            <p class="card-text">Learn the fundamentals of Python in this free course.find good results.</p>
+            <a href="https://www.ibm.com/search?lang=en&cc=in&q=python" class="btn go-to-course-btn">Go to Course</a>
+        </div>
+    </div>
+</div>
+
+<!-- Example of a Course Card -->
+<div class="col-md-3 course-card" data-category="python" data-type="free">
+    <div class="card">
+        <img src="sl.jpg" class="card-img-top" alt="Course Image">
+        <div class="card-body">
+            <h5 class="card-title">simplilearn</h5>
+            <p class="card-text">Learn the fundamentals of Python in this free course.find good results.</p>
+            <a href="https://www.simplilearn.com/skillup-search?sortBy=Relevance&tag=python" class="btn go-to-course-btn">Go to Course</a>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Example of a Course Card -->
+<div class="col-md-3 course-card" data-category="python" data-type="free">
+    <div class="card">
+        <img src="free.jpeg" class="card-img-top" alt="Course Image">
+        <div class="card-body">
+            <h5 class="card-title">freecodecamp</h5>
+            <p class="card-text">Learn the fundamentals of Python in this free course.find good results.</p>
+            <a href="https://www.freecodecamp.org/news/search/?query=python" class="btn go-to-course-btn">Go to Course</a>
+        </div>
+    </div>
+</div>
+
+<!-- Example of a Course Card -->
+<div class="col-md-3 course-card" data-category="python" data-type="free">
+    <div class="card">
+        <img src="kag.jpg" class="card-img-top" alt="Course Image">
+        <div class="card-body">
+            <h5 class="card-title">kaggle</h5>
+            <p class="card-text">Learn the fundamentals of Python in this free course.find good results.</p>
+            <a href="https://www.kaggle.com/search?q=python" class="btn go-to-course-btn">Go to Course</a>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- Example of a Course Card -->
+<div class="col-md-3 course-card" data-category="python" data-type="paid">
+    <div class="card">
+        <img src="coursera.jpeg" class="card-img-top" alt="Course Image">
+        <div class="card-body">
+            <h5 class="card-title">coursera</h5>
+            <p class="card-text">Learn the fundamentals of python in this paid course.find good results.</p>
+            <a href="https://www.coursera.org/search?query=python" class="btn go-to-course-btn">Go to Course</a>
+        </div>
+    </div>
+</div>
+
+<!-- Example of a Course Card -->
+<div class="col-md-3 course-card" data-category="python" data-type="paid">
+    <div class="card">
+        <img src="edx.jpeg" class="card-img-top" alt="Course Image">
+        <div class="card-body">
+            <h5 class="card-title">edx</h5>
+            <p class="card-text">Learn the fundamentals of python in this paid course.find good results.</p>
+            <a href="https://www.edx.org/search?q=python" class="btn go-to-course-btn">Go to Course</a>
+        </div>
+    </div>
+</div>
+
+<!-- Example of a Course Card -->
+<div class="col-md-3 course-card" data-category="python" data-type="paid">
+    <div class="card">
+        <img src="udemy.jpeg" class="card-img-top" alt="Course Image">
+        <div class="card-body">
+            <h5 class="card-title">udemy</h5>
+            <p class="card-text">Learn the fundamentals of python in this paid course.find good results.</p>
+            <a href="https://www.udemy.com/courses/search/?src=ukw&q=python" class="btn go-to-course-btn">Go to Course</a>
+        </div>
+    </div>
+</div>
+
+<!-- Example of a Course Card -->
+<div class="col-md-3 course-card" data-category="python" data-type="paid">
+    <div class="card">
+        <img src="plurals.jpeg" class="card-img-top" alt="Course Image">
+        <div class="card-body">
+            <h5 class="card-title">Pluralsights</h5>
+            <p class="card-text">Learn the fundamentals of python in this paid course.find good results.</p>
+            <a href="https://www.pluralsight.com/search?q=python" class="btn go-to-course-btn">Go to Course</a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Example of a Course Card -->
+<div class="col-md-3 course-card" data-category="python" data-type="paid">
+    <div class="card">
+        <img src="dog.jpeg" class="card-img-top" alt="Course Image">
+        <div class="card-body">
+            <h5 class="card-title">data dog
+            </h5>
+            <p class="card-text">Learn the fundamentals of python in this paid course.find good results.</p>
+            <a href="https://www.datacamp.com/courses-all?q=python" class="btn go-to-course-btn">Go to Course</a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Example of a Course Card -->
+<div class="col-md-3 course-card" data-category="python" data-type="paid">
+    <div class="card">
+        <img src="linkedin.jpeg" class="card-img-top" alt="Course Image">
+        <div class="card-body">
+            <h5 class="card-title">linkedin</h5>
+            <p class="card-text">Learn the fundamentals of python in this paid course.find good results.</p>
+            <a href="https://www.linkedin.com/learning/search?keywords=python&upsellOrderOrigin=default_guest_learning&trk=learning-serp_learning-search-bar_search-submit" class="btn go-to-course-btn">Go to Course</a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Example of a Course Card -->
+<div class="col-md-3 course-card" data-category="python" data-type="paid">
+    <div class="card">
+        <img src="ss.jpeg" class="card-img-top" alt="Course Image">
+        <div class="card-body">
+            <h5 class="card-title">skillshare</h5>
+            <p class="card-text">Learn the fundamentals of python in this paid course.find good results.</p>
+            <a href="https://www.skillshare.com/en/search?query=python" class="btn go-to-course-btn">Go to Course</a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Example of a Course Card -->
+<div class="col-md-3 course-card" data-category="python" data-type="paid">
+    <div class="card">
+        <img src="educ.jpeg" class="card-img-top" alt="Course Image">
+        <div class="card-body">
+            <h5 class="card-title">educative</h5>
+            <p class="card-text">Learn the fundamentals of python in this paid course.find good results.</p>
+            <a href="https://www.educative.io/catalog/python" class="btn go-to-course-btn">Go to Course</a>
+        </div>
+    </div>
+</div>
+
+<!-- Example of a Course Card -->
+<div class="col-md-3 course-card" data-category="python" data-type="paid">
+    <div class="card">
+        <img src="code.jpeg" class="card-img-top" alt="Course Image">
+        <div class="card-body">
+            <h5 class="card-title">codecademy</h5>
+            <p class="card-text">Learn the fundamentals of python in this paid course.find good results.</p>
+            <a href="https://www.codecademy.com/search?query=Python" class="btn go-to-course-btn">Go to Course</a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Example of a Course Card -->
+<div class="col-md-3 course-card" data-category="python" data-type="paid">
+    <div class="card">
+        <img src="th.jpg" class="card-img-top" alt="Course Image">
+        <div class="card-body">
+            <h5 class="card-title">zenva</h5>
+            <p class="card-text">Learn the fundamentals of python in this paid course.find good results.</p>
+            <a href="https://academy.zenva.com/search/?s=python" class="btn go-to-course-btn">Go to Course</a>
+        </div>
+    </div>
+</div>
+
+
+<script>
+       
+    
+    document.addEventListener("DOMContentLoaded", function () {
+      const buttons = document.querySelectorAll(".filter-btn");
+      const courses = document.querySelectorAll(".course-card");
+      const heading = document.getElementById("courseHeading");
+  
+      buttons.forEach(button => {
+        button.addEventListener("click", () => {
+          const selectedType = button.getAttribute("data-type");
+  
+          // Update Heading
+          heading.textContent = selectedType === "free" ? "Free Python Courses" : "Paid Python Courses";
+  
+          // Show/Hide Courses
+          courses.forEach(course => {
+            const courseType = course.getAttribute("data-type");
+            if (courseType === selectedType) {
+              course.style.display = "block";
+            } else {
+              course.style.display = "none";
+            }
+          });
+        });
+      });
+    });
+  
+  
+      </script>
+  </body>
+  </html>

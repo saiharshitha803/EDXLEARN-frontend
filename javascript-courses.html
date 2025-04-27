@@ -1,0 +1,334 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>javascript Courses</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding: 2rem;
+        }
+        .course-card {
+            margin-bottom: 20px;
+        }
+        .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+  background-color: rgb(222, 37, 222); /* <-- Add this line */
+  color: white; /* Optional: Makes text/icons visible on purple */
+     }
+
+    
+
+    .header-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .header-buttons i {
+      font-size: 1.2rem;
+      margin-left: 1rem;
+      cursor: pointer;
+      color: var(--text-color);
+    }
+    .go-to-course-btn {
+    background: linear-gradient(135deg, #ff00cc, #3333ff); /* Pink to Purple gradient */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  .go-to-course-btn:hover {
+    background: linear-gradient(135deg, #ff66d9, #6666ff); /* Lighter on hover */
+    transform: scale(1.05); /* Small zoom effect */
+  }
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-title">EdxLearn</div>
+        <div class="header-buttons">
+          <i class="fas fa-circle-info" title="About"></i>
+          <i id="theme-toggle" class="fas fa-moon" title="Toggle Theme"></i>
+          <i class="fas fa-sign-out-alt" title="Logout"></i>
+        </div>
+      </div>
+    
+    <div class="text-center my-4">
+        <button class="btn btn-outline-success filter-btn" data-type="free">Show Free Courses</button>
+        <button class="btn btn-outline-danger filter-btn" data-type="paid">Show Paid Courses</button>
+      </div>
+      
+      <h2 id="courseHeading" class="text-center mb-4">All javascript Courses</h2>
+      
+      <div id="courseList" class="row">
+        <!-- All your free & paid course cards go here -->
+                   <!-- javascript-->
+<div class="col-md-3 course-card" data-category="javascript" data-type="free">
+    <div class="card">
+        <img src="free.jpeg" class="card-img-top" alt="Course Image">
+        <div class="card-body">
+            <h5 class="card-title">freecodecamp</h5>
+            <p class="card-text">Start your JavaScript journey with this beginner-friendly course (Free).</p>
+            <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/" class="btn go-to-course-btn">Go to Course</a>
+        </div>
+    </div>
+</div>
+<div class="col-md-3 course-card" data-category="javascript" data-type="free">
+    <div class="card">
+        <img src="code.jpeg" class="card-img-top" alt="Course Image">
+        <div class="card-body">
+            <h5 class="card-title">codecademy</h5>
+            <p class="card-text">codecademy helps you to Start your JavaScript journey with this beginner-friendly course (Free).</p>
+            <a href="https://www.codecademy.com/learn/introduction-to-javascript" class="btn go-to-course-btn">Go to Course</a>
+        </div>
+    </div>
+</div>
+<div class="col-md-3 course-card" data-category="javascript" data-type="free">
+    <div class="card">
+        <img src="khan.jpeg" class="card-img-top" alt="Course Image">
+        <div class="card-body">
+            <h5 class="card-title">Khanacademy</h5>
+            <p class="card-text">Start your JavaScript journey with this beginner-friendly course (Free).</p>
+            <a href="https://www.khanacademy.org/computing/computer-programming/programming" class="btn go-to-course-btn">Go to Course</a>
+        </div>
+    </div>
+</div>
+<div class="col-md-3 course-card" data-category="javascript" data-type="free">
+    <div class="card">
+        <img src="mozilla.jpeg" class="card-img-top" alt="Course Image">
+        <div class="card-body">
+            <h5 class="card-title">Mozilla</h5>
+            <p class="card-text">Start your JavaScript journey developers are here to help you for (Free).</p>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" class="btn go-to-course-btn">Go to Course</a>
+        </div>
+    </div>
+</div>
+<div class="col-md-3 course-card" data-category="javascript" data-type="free">
+    <div class="card">
+        <img src="coursera.jpeg" class="card-img-top" alt="Course Image">
+        <div class="card-body">
+            <h5 class="card-title">coursera</h5>
+            <p class="card-text">Start your JavaScript journey with this beginner-friendly course (Free).</p>
+            <a href="https://www.coursera.org/learn/javascript-jquery-json" class="btn go-to-course-btn">Go to Course</a>
+        </div>
+    </div>
+</div>
+<div class="col-md-3 course-card" data-category="javascript" data-type="free">
+    <div class="card">
+        <img src="edx.jpeg" class="card-img-top" alt="Course Image">
+        <div class="card-body">
+            <h5 class="card-title">EDX</h5>
+            <p class="card-text">Start your JavaScript journey with this beginner-friendly course (Free).</p>
+            <a href="https://www.edx.org/course/introduction-to-javascedxript-the-basics" class="btn go-to-course-btn">Go to Course</a>
+        </div>
+    </div>
+</div>
+<div class="col-md-3 course-card" data-category="javascript" data-type="free">
+    <div class="card">
+        <img src="udemy.jpeg" class="card-img-top" alt="Course Image">
+        <div class="card-body">
+            <h5 class="card-title">udemy</h5>
+            <p class="card-text">Start your JavaScript journey with this beginner-friendly course (Free).</p>
+            <a href="https://www.udemy.com/course/javascript-essentials/" class="btn go-to-course-btn">Go to Course</a>
+        </div>
+    </div>
+</div>
+<div class="col-md-3 course-card" data-category="javascript" data-type="free">
+    <div class="card">
+        <img src="plurals.jpeg" class="card-img-top" alt="Course Image">
+        <div class="card-body">
+            <h5 class="card-title">pluralsights</h5>
+            <p class="card-text">Start your JavaScript journey with this beginner-friendly course (Free).</p>
+            <a href="https://www.pluralsight.com/courses/javascript-fundamentals" class="btn go-to-course-btn">Go to Course</a>
+        </div>
+    </div>
+</div>
+<div class="col-md-3 course-card" data-category="javascript" data-type="free">
+    <div class="card">
+        <img src="solo.jpeg" class="card-img-top" alt="Course Image">
+        <div class="card-body">
+            <h5 class="card-title">sololearn</h5>
+            <p class="card-text">Start your JavaScript journey with this beginner-friendly course (Free).</p>
+            <a href="https://www.sololearn.com/Course/JavaScript/" class="btn go-to-course-btn">Go to Course</a>
+        </div>
+    </div>
+</div>
+<div class="col-md-3 course-card" data-category="javascript" data-type="free">
+    <div class="card">
+        <img src="odin.jpeg" class="card-img-top" alt="Course Image">
+        <div class="card-body">
+            <h5 class="card-title">theodinproject</h5>
+            <p class="card-text">Start your JavaScript journey with this beginner-friendly course (Free).</p>
+            <a href="https://www.theodinproject.com/courses/javascript" class="btn go-to-course-btn">Go to Course</a>
+        </div>
+    </div>
+</div>
+            
+    
+<div class="col-md-3 course-card" data-category="javascript" data-type="paid">
+    <div class="card">
+        <img src="udemy.jpeg" class="card-img-top" alt="Course Image">
+        <div class="card-body">
+            <h5 class="card-title">udemy</h5>
+            <p class="card-text">Learn the fundamentals of js in this paid course.find good results.</p>
+            <a href="https://www.udemy.com/courses/search/?src=ukw&q=js" class="btn go-to-course-btn">Go to Course</a>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-3 course-card" data-category="javascript" data-type="paid">
+    <div class="card">
+        <img src="code.jpeg" class="card-img-top" alt="Course Image">
+        <div class="card-body">
+            <h5 class="card-title">codecademy</h5>
+            <p class="card-text">Learn the fundamentals of js in this paid course.find good results.</p>
+            <a href="https://www.codecademy.com/search?query=js" class="btn go-to-course-btn">Go to Course</a>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-3 course-card" data-category="javascript" data-type="paid">
+    <div class="card">
+        <img src="coursera.jpeg" class="card-img-top" alt="Course Image">
+        <div class="card-body">
+            <h5 class="card-title">coursera</h5>
+            <p class="card-text">Learn the fundamentals of js in this paid course.find good results.</p>
+            <a href="https://www.coursera.org/search?query=js" class="btn go-to-course-btn">Go to Course</a>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-3 course-card" data-category="javascript" data-type="paid">
+    <div class="card">
+        <img src="felogo.jpg" class="card-img-top" alt="Course Image">
+        <div class="card-body">
+            <h5 class="card-title">frontendmasters</h5>
+            <p class="card-text">Learn the fundamentals of js in this paid course.find good results.</p>
+            <a href="https://frontendmasters.com/?q=JavaScript" class="btn go-to-course-btn">Go to Course</a>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-md-3 course-card" data-category="javascript" data-type="paid">
+    <div class="card">
+        <img src="scrimba.jpeg" class="card-img-top" alt="Course Image">
+        <div class="card-body">
+            <h5 class="card-title">scrimba</h5>
+            <p class="card-text">Learn the fundamentals of js in this paid course.find good results.</p>
+            <a href="https://scrimba.com/t0js" class="btn go-to-course-btn">Go to Course</a>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-md-3 course-card" data-category="javascript" data-type="paid">
+    <div class="card">
+        <img src="linkedin.jpeg" class="card-img-top" alt="Course Image">
+        <div class="card-body">
+            <h5 class="card-title">linkedin</h5>
+            <p class="card-text">Learn the fundamentals of js in this paid course.find good results.</p>
+            <a href="https://www.linkedin.com/learning/search?keywords=js&upsellOrderOrigin=default_guest_learning&trk=homepage-learning_learning-search-bar_search-submit" class="btn go-to-course-btn">Go to Course</a>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-md-3 course-card" data-category="javascript" data-type="paid">
+    <div class="card">
+        <img src="ztm.jpeg" class="card-img-top" alt="Course Image">
+        <div class="card-body">
+            <h5 class="card-title">zerotomastery</h5>
+            <p class="card-text">Learn the fundamentals of js in this paid course.find good results.</p>
+            <a href="https://zerotomastery.io/courses/?category=all" class="btn go-to-course-btn">Go to Course</a>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-md-3 course-card" data-category="javascript" data-type="paid">
+    <div class="card">
+        <img src="ja.jpg" class="card-img-top" alt="Course Image">
+        <div class="card-body">
+            <h5 class="card-title">script</h5>
+            <p class="card-text">Learn the fundamentals of js in this paid course.find good results.</p>
+            <a href="https://javascript.info/" class="btn go-to-course-btn">Go to Course</a>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-md-3 course-card" data-category="javascript" data-type="paid">
+    <div class="card">
+        <img src="wes.png" class="card-img-top" alt="Course Image">
+        <div class="card-body">
+            <h5 class="card-title">wesbos</h5>
+            <p class="card-text">Learn the fundamentals of js in this paid course.find good results.</p>
+            <a href="https://wesbos.com/javascript" class="btn go-to-course-btn">Go to Course</a>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-md-3 course-card" data-category="javascript" data-type="paid">
+    <div class="card">
+        <img src="egg.jpeg"class="card-img-top" alt="Course Image">
+        <div class="card-body">
+            <h5 class="card-title">egghead</h5>
+            <p class="card-text">Learn the fundamentals of js in this paid course.find good results.</p>
+            <a href="https://egghead.io/q/javascript?q=js" class="btn go-to-course-btn">Go to Course</a>
+        </div>
+    </div>
+</div>         
+
+
+
+<script>
+       
+    
+    document.addEventListener("DOMContentLoaded", function () {
+      const buttons = document.querySelectorAll(".filter-btn");
+      const courses = document.querySelectorAll(".course-card");
+      const heading = document.getElementById("courseHeading");
+  
+      buttons.forEach(button => {
+        button.addEventListener("click", () => {
+          const selectedType = button.getAttribute("data-type");
+  
+          // Update Heading
+          heading.textContent = selectedType === "free" ? "Free javascript Courses" : "Paid javascript Courses";
+  
+          // Show/Hide Courses
+          courses.forEach(course => {
+            const courseType = course.getAttribute("data-type");
+            if (courseType === selectedType) {
+              course.style.display = "block";
+            } else {
+              course.style.display = "none";
+            }
+          });
+        });
+      });
+    });
+  
+  
+      </script>
+  </body>
+  </html>

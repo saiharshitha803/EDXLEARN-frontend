@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>C Courses</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding: 2rem;
+        }
+        .course-card {
+            margin-bottom: 20px;
+        }
+        .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+  background-color: rgb(222, 37, 222); /* <-- Add this line */
+  color: white; /* Optional: Makes text/icons visible on purple */
+     }
+
+    
+
+    .header-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .header-buttons i {
+      font-size: 1.2rem;
+      margin-left: 1rem;
+      cursor: pointer;
+      color: var(--text-color);
+    }
+    .go-to-course-btn {
+    background: linear-gradient(135deg, #ff00cc, #3333ff); /* Pink to Purple gradient */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  .go-to-course-btn:hover {
+    background: linear-gradient(135deg, #ff66d9, #6666ff); /* Lighter on hover */
+    transform: scale(1.05); /* Small zoom effect */
+  }
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-title">EdxLearn</div>
+        <div class="header-buttons">
+          <i class="fas fa-circle-info" title="About"></i>
+          <i id="theme-toggle" class="fas fa-moon" title="Toggle Theme"></i>
+          <i class="fas fa-sign-out-alt" title="Logout"></i>
+        </div>
+      </div>
+    
+    <div class="text-center my-4">
+        <button class="btn btn-outline-success filter-btn" data-type="free">Show Free Courses</button>
+        <button class="btn btn-outline-danger filter-btn" data-type="paid">Show Paid Courses</button>
+      </div>
+      
+      <h2 id="courseHeading" class="text-center mb-4">All C Courses</h2>
+      
+      <div id="courseList" class="row">
+
+         
+        <div class="col-md-3 course-card" data-category="c" data-type="free">
+            <div class="card">
+                <img src="lh.jpeg" class="card-img-top" alt="Course Image">
+                <div class="card-body">
+                    <h5 class="card-title">learn-c</h5>
+                    <p class="card-text">Learn the fundamentals of C in this free course.find good results.</p>
+                    <a href="https://www.learn-c.org/" class="btn  go-to-course-btn">Go to Course</a>
+                </div>
+            </div>
+        </div>
+    
+    
+        <!-- Example of a Course Card -->
+        <div class="col-md-3 course-card" data-category="c" data-type="free">
+            <div class="card">
+                <img src="gfg.jpeg" class="card-img-top" alt="Course Image">
+                <div class="card-body">
+                    <h5 class="card-title">geeksforgeeks</h5>
+                    <p class="card-text">Learn the fundamentals of C in this free course.find good results.</p>
+                    <a href="https://www.geeksforgeeks.org/c-programming-language/" class="btn  go-to-course-btn">Go to Course</a>
+                </div>
+            </div>
+        </div>
+    
+    
+        <!-- Example of a Course Card -->
+        <div class="col-md-3 course-card" data-category="c" data-type="free">
+            <div class="card">
+                <img src="tuto.jpeg" class="card-img-top" alt="Course Image">
+                <div class="card-body">
+                    <h5 class="card-title">tutorialspoint</h5>
+                    <p class="card-text">Learn the fundamentals of C in this free course.find good results.</p>
+                    <a href="https://www.tutorialspoint.com/cprogramming/index.html" class="btn  go-to-course-btn">Go to Course</a>
+                </div>
+            </div>
+        </div>
+    
+    
+       <!-- Example of a Course Card -->
+       <div class="col-md-3 course-card" data-category="c" data-type="free">
+        <div class="card">
+            <img src="pro.jpg" class="card-img-top" alt="Course Image">
+            <div class="card-body">
+                <h5 class="card-title">programiz</h5>
+                <p class="card-text">Learn the fundamentals of C in this free course.find good results.</p>
+                <a href="https://www.programiz.com/c-programming" class="btn  go-to-course-btn">Go to Course</a>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+    <!-- Example of a Course Card -->
+    <div class="col-md-3 course-card" data-category="c" data-type="free">
+        <div class="card">
+            <img src="w3schl.jpeg" class="card-img-top" alt="Course Image">
+            <div class="card-body">
+                <h5 class="card-title">w3schools</h5>
+                <p class="card-text">Learn the fundamentals of C in this free course.find good results.</p>
+                <a href="https://www.w3schools.com/c/" class="btn  go-to-course-btn">Go to Course</a>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+    <!-- Example of a Course Card -->
+    <div class="col-md-3 course-card" data-category="c" data-type="free">
+        <div class="card">
+            <img src="yt.jpg" class="card-img-top" alt="Course Image">
+            <div class="card-body">
+                <h5 class="card-title">youtube</h5>
+                <p class="card-text">Learn the fundamentals of C in this free course.find good results.</p>
+                <a href="https://www.youtube.com/watch?v=KJgsSFOSQv0" class="btn  go-to-course-btn">Go to Course</a>
+            </div>
+        </div>
+    </div>
+    
+    
+    <!-- Example of a Course Card -->
+    <div class="col-md-3 course-card" data-category="c" data-type="free">
+        <div class="card">
+            <img src="get.jpg" class="card-img-top" alt="Course Image">
+            <div class="card-body">
+                <h5 class="card-title">github</h5>
+                <p class="card-text">Learn the fundamentals of C in this free course.find good results.</p>
+                <a href="https://github.com/search?q=c+language%3AC&type=repositories&l=C" class="btn  go-to-course-btn">Go to Course</a>
+            </div>
+        </div>
+    </div>
+       
+    <!-- Example of a Course Card -->
+<div class="col-md-3 course-card" data-category="c" data-type="free">
+<div class="card">
+<img src="hav.jpg" class="card-img-top" alt="Course Image">
+<div class="card-body">
+<h5 class="card-title">harvard</h5>
+<p class="card-text">Learn the fundamentals of C in this free course.find good results.</p>
+<a href="https://cs50.harvard.edu/x/2025/weeks/1/" class="btn  go-to-course-btn">Go to Course</a>
+</div>
+</div>
+</div>
+
+
+<!-- Example of a Course Card -->
+<div class="col-md-3 course-card" data-category="c" data-type="free">
+<div class="card">
+<img src="udemy.jpeg" class="card-img-top" alt="Course Image">
+<div class="card-body">
+<h5 class="card-title">codeforwin</h5>
+<p class="card-text">Learn the fundamentals of C in this free course.find good results.</p>
+<a href="https://codeforwin.org/c-programming" class="btn  go-to-course-btn">Go to Course</a>
+</div>
+</div>
+</div>
+
+
+<!-- Example of a Course Card -->
+<div class="col-md-3 course-card" data-category="c" data-type="free">
+<div class="card">
+<img src="solo.jpeg" class="card-img-top" alt="Course Image">
+<div class="card-body">
+<h5 class="card-title">sololearn</h5>
+<p class="card-text">Learn the fundamentals of C in this free course.find good results.</p>
+<a href="https://www.sololearn.com/learn/c" class="btn  go-to-course-btn">Go to Course</a>
+</div>
+</div>
+</div>
+
+
+        <!-- Example of a Course Card -->
+<div class="col-md-3 course-card" data-category="c" data-type="paid">
+<div class="card">
+<img src="coursera.jpeg" class="card-img-top" alt="Course Image">
+<div class="card-body">
+<h5 class="card-title">Coursera</h5>
+<p class="card-text">Learn the fundamentals of C in this paid course.find good results.</p>
+<a href="https://www.coursera.org/search?query=c" class="btn  go-to-course-btn">Go to Course</a>
+</div>
+</div>
+</div>
+
+
+<!-- Example of a Course Card -->
+<div class="col-md-3 course-card" data-category="c" data-type="paid">
+<div class="card">
+<img src="udemy.jpeg" class="card-img-top" alt="Course Image">
+<div class="card-body">
+<h5 class="card-title">udemy</h5>
+<p class="card-text">Learn the fundamentals of C in this paid course.find good results.</p>
+<a href="https://www.udemy.com/courses/search/?src=ukw&q=c" class="btn  go-to-course-btn">Go to Course</a>
+</div>
+</div>
+</div>
+
+<!-- Example of a Course Card -->
+<div class="col-md-3 course-card" data-category="c" data-type="paid">
+<div class="card">
+<img src="edx.jpeg" class="card-img-top" alt="Course Image">
+<div class="card-body">
+<h5 class="card-title">EDX</h5>
+<p class="card-text">Learn the fundamentals of C in this paid course.find good results.</p>
+<a href="https://www.edx.org/search?q=c" class="btn  go-to-course-btn">Go to Course</a>
+</div>
+</div>
+</div>
+
+<!-- Example of a Course Card -->
+<div class="col-md-3 course-card" data-category="c" data-type="paid">
+<div class="card">
+<img src="plurals.jpeg" class="card-img-top" alt="Course Image">
+<div class="card-body">
+<h5 class="card-title">pluralsights</h5>
+<p class="card-text">Learn the fundamentals of C in this paid course.find good results.</p>
+<a href="https://www.pluralsight.com/paths/c-development-fundamentals" class="btn  go-to-course-btn">Go to Course</a>
+</div>
+</div>
+</div>
+
+<!-- Example of a Course Card -->
+<div class="col-md-3 course-card" data-category="c" data-type="paid">
+<div class="card">
+<img src="linkedin.jpeg" class="card-img-top" alt="Course Image">
+<div class="card-body">
+<h5 class="card-title">linkedin</h5>
+<p class="card-text">Learn the fundamentals of C in this paid course.find good results.</p>
+<a href="https://www.linkedin.com/learning/search?keywords=c&upsellOrderOrigin=default_guest_learning&trk=homepage-learning_learning-search-bar_search-submit" class="btn  go-to-course-btn">Go to Course</a>
+</div>
+</div>
+</div>
+
+<!-- Example of a Course Card -->
+<div class="col-md-3 course-card" data-category="c" data-type="paid">
+<div class="card">
+<img src="ss.jpeg" class="card-img-top" alt="Course Image">
+<div class="card-body">
+<h5 class="card-title">skillshare</h5>
+<p class="card-text">Learn the fundamentals of C in this paid course.find good results.</p>
+<a href="https://www.skillshare.com/en/search?query=c" class="btn  go-to-course-btn">Go to Course</a>
+</div>
+</div>
+</div>
+
+<!-- Example of a Course Card -->
+<div class="col-md-3 course-card" data-category="c" data-type="paid">
+<div class="card">
+<img src="educ.jpeg" class="card-img-top" alt="Course Image">
+<div class="card-body">
+<h5 class="card-title">educative</h5>
+<p class="card-text">Learn the fundamentals of C in this paid course.find good results.</p>
+<a href="https://www.educative.io/search?query=c" class="btn  go-to-course-btn">Go to Course</a>
+</div>
+</div>
+</div>
+
+<!-- Example of a Course Card -->
+<div class="col-md-3 course-card" data-category="c" data-type="paid">
+<div class="card">
+<img src="code.jpeg" class="card-img-top" alt="Course Image">
+<div class="card-body">
+<h5 class="card-title">codecademy</h5>
+<p class="card-text">Learn the fundamentals of C in this paid course.find good results.</p>
+<a href="https://www.codecademy.com/learn/paths/c" class="btn  go-to-course-btn">Go to Course</a>
+</div>
+</div>
+</div>
+
+<!-- Example of a Course Card -->
+<div class="col-md-3 course-card" data-category="c" data-type="paid">
+<div class="card">
+<img src="th.jpg" class="card-img-top" alt="Course Image">
+<div class="card-body">
+<h5 class="card-title">zenva</h5>
+<p class="card-text">Learn the fundamentals of C in this paid course.find good results.</p>
+<a href="https://academy.zenva.com/search/?s=c" class="btn  go-to-course-btn">Go to Course</a>
+</div>
+</div>
+</div>
+
+<!-- Example of a Course Card -->
+<div class="col-md-3 course-card" data-category="c" data-type="paid">
+<div class="card">
+<img src="mit.png" class="card-img-top" alt="Course Image">
+<div class="card-body">
+<h5 class="card-title">mit</h5>
+<p class="card-text">Learn the fundamentals of C in this paid course.find good results.</p>
+<a href="https://ocw.mit.edu/search/?q=c" class="btn  go-to-course-btn">Go to Course</a>
+</div>
+</div>
+</div>
+
+
+<script>
+       
+    
+    document.addEventListener("DOMContentLoaded", function () {
+      const buttons = document.querySelectorAll(".filter-btn");
+      const courses = document.querySelectorAll(".course-card");
+      const heading = document.getElementById("courseHeading");
+  
+      buttons.forEach(button => {
+        button.addEventListener("click", () => {
+          const selectedType = button.getAttribute("data-type");
+  
+          // Update Heading
+          heading.textContent = selectedType === "free" ? "Free C Courses" : "Paid C Courses";
+  
+          // Show/Hide Courses
+          courses.forEach(course => {
+            const courseType = course.getAttribute("data-type");
+            if (courseType === selectedType) {
+              course.style.display = "block";
+            } else {
+              course.style.display = "none";
+            }
+          });
+        });
+      });
+    });
+  
+  
+      </script>
+  
+
+
+
+  
+
+</body>
+</html>

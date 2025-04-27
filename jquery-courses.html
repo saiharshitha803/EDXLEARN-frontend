@@ -1,0 +1,552 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Courses</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding: 2rem;
+        }
+        .course-card {
+            margin-bottom: 20px;
+        }
+        .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+  background-color: rgb(222, 37, 222); /* <-- Add this line */
+  color: white; /* Optional: Makes text/icons visible on purple */
+     }
+
+    
+
+    .header-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .header-buttons i {
+      font-size: 1.2rem;
+      margin-left: 1rem;
+      cursor: pointer;
+      color: var(--text-color);
+    }
+    .go-to-course-btn {
+    background: linear-gradient(135deg, #ff00cc, #3333ff); /* Pink to Purple gradient */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  .go-to-course-btn:hover {
+    background: linear-gradient(135deg, #ff66d9, #6666ff); /* Lighter on hover */
+    transform: scale(1.05); /* Small zoom effect */
+  }
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-title">EdxLearn</div>
+        <div class="header-buttons">
+          <i class="fas fa-circle-info" title="About"></i>
+          <i id="theme-toggle" class="fas fa-moon" title="Toggle Theme"></i>
+          <i class="fas fa-sign-out-alt" title="Logout"></i>
+        </div>
+      </div>
+ 
+    <div class="text-center my-4">
+        <button class="btn btn-outline-success filter-btn" data-type="free">Show Free Courses</button>
+        <button class="btn btn-outline-danger filter-btn" data-type="paid">Show Paid Courses</button>
+      </div>
+      
+      <h2 id="courseHeading" class="text-center mb-4">All jQuery Courses</h2>
+      
+      <div id="courseList" class="row">
+        <!-- All your free & paid course cards go here -->
+    
+                       
+
+<div class="col-md-3 course-card" data-category="jquery" data-type="paid">
+    <div class="card">
+        <img src="sl.jpg" class="card-img-top" alt="Course Image">
+        <div class="card-body">
+            <h5 class="card-title">jquery(simplilearn)</h5>
+            <p class="card-text">learn fundamentals of jquery from simplolearn</p>
+            <a href="https://www.simplilearn.com/jquery-training-course" class="btn go-to-course-btn">Go to Course</a>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-3 course-card" data-category="jquery" data-type="paid">
+    <div class="card">
+        <img src="inpa.jpeg" class="card-img-top" alt="Course Image">
+        <div class="card-body">
+            <h5 class="card-title">jquery(intellipat)</h5>
+            <p class="card-text">learn fundamentals of jquery from intellipat</p>
+            <a href="https://intellipaat.com/html-jquery-training/" class="btn go-to-course-btn">Go to Course</a>
+        </div>
+    </div>
+</div>
+<div class="col-md-3 course-card" data-category="jquery" data-type="paid">
+    <div class="card">
+        <img src="reka.jpeg" class="card-img-top" alt="Course Image">
+        <div class="card-body">
+            <h5 class="card-title">jquery(edureka)</h5>
+            <p class="card-text">learn jquery from edureka</p>
+            <a href="https://www.edureka.co/jquery-training" class="btn go-to-course-btn">Go to Course</a>
+        </div>
+    </div>
+</div>
+<div class="col-md-3 course-card" data-category="jquery" data-type="paid">
+    <div class="card">
+        <img src="udemy.jpeg" class="card-img-top" alt="Course Image">
+        <div class="card-body">
+            <h5 class="card-title">jquery(udemy)</h5>
+            <p class="card-text">learn jquery from beginner to advanced</p>
+            <a href="https://www.udemy.com/course/jquery-tutorial/?couponCode=ST13MT80425G3" class="btn go-to-course-btn">Go to Course</a>
+        </div>
+    </div>
+</div>
+<div class="col-md-3 course-card" data-category="jquery" data-type="paid">
+    <div class="card">
+        <img src="gologic.png" class="card-img-top" alt="Course Image">
+        <div class="card-body">
+            <h5 class="card-title">jquery(gologica)</h5>
+            <p class="card-text">learn jquery from gologica</p>
+            <a href="https://www.gologica.com/course/jquery/" class="btn go-to-course-btn">Go to Course</a>
+        </div>
+    </div>
+</div>
+<div class="col-md-3 course-card" data-category="jquery" data-type="paid">
+    <div class="card">
+        <img src="cro.jpeg" class="card-img-top" alt="Course Image">
+        <div class="card-body">
+            <h5 class="card-title">jquery(cromacampus)</h5>
+            <p class="card-text">train into jquery from cromacampus</p>
+            <a href="https://www.cromacampus.com/courses/jquery-online-training-in-india/" class="btn go-to-course-btn">Go to Course</a>
+        </div>
+    </div>
+</div>
+<div class="col-md-3 course-card" data-category="jquery" data-type="paid">
+    <div class="card">
+        <img src="ali.jpeg" class="card-img-top" alt="Course Image">
+        <div class="card-body">
+            <h5 class="card-title">jquery(acte)</h5>
+            <p class="card-text">learn jquery from acte</p>
+            <a href="https://www.acte.in/jquery-training" class="btn go-to-course-btn">Go to Course</a>
+        </div>
+    </div>
+</div>
+<div class="col-md-3 course-card" data-category="jquery" data-type="paid">
+    <div class="card">
+        <img src="know.jpeg" class="card-img-top" alt="Course Image">
+        <div class="card-body">
+            <h5 class="card-title">jquery(theknowledgeacademy)</h5>
+            <p class="card-text">learn fundamentals of jquery</p>
+            <a href="https://www.theknowledgeacademy.com/in/courses/programming-training/jquery-ui-development-training/" class="btn go-to-course-btn">Go to Course</a>
+        </div>
+    </div>
+</div>
+<div class="col-md-3 course-card" data-category="jquery" data-type="paid">
+    <div class="card">
+        <img src="ss.jpeg" class="card-img-top" alt="Course Image">
+        <div class="card-body">
+            <h5 class="card-title">jquery(skillshare)</h5>
+            <p class="card-text">master jquery in easy steps with skillshare</p>
+            <a href="https://www.skillshare.com/en/browse/jquery" class="btn go-to-course-btn">Go to Course</a>
+        </div>
+    </div>
+</div>
+<div class="col-md-3 course-card" data-category="jquery" data-type="paid">
+    <div class="card">
+        <img src="b.jpeg" class="card-img-top" alt="Course Image">
+        <div class="card-body">
+            <h5 class="card-title">jquery(besant tech)</h5>
+            <p class="card-text">train for jquery from besant technologies</p>
+            <a href="https://www.besanttechnologies.com/jquery-training-in-bangalore" class="btn go-to-course-btn">Go to Course</a>
+        </div>
+    </div>
+</div>
+<div class="col-md-3 course-card" data-category="jquery" data-type="paid">
+    <div class="card">
+        <img src="ng.jpg" class="card-img-top" alt="Course Image">
+        <div class="card-body">
+            <h5 class="card-title">jquery(next-G education)</h5>
+            <p class="card-text"> Online JavaScript + jQuery Certificate Course</p>
+            <a href="https://www.nextgeducation.com/jquery-training-institute" class="btn go-to-course-btn">Go to Course</a>
+        </div>
+    </div>
+</div>
+<div class="col-md-3 course-card" data-category="jquery" data-type="paid">
+    <div class="card">
+        <img src="admec.jpg" class="card-img-top" alt="Course Image">
+        <div class="card-body">
+            <h5 class="card-title">jquery(admec)</h5>
+            <p class="card-text"> A 1-month certificate program focusing on developing advanced jQuery solutions and projects</p>
+            <a href="https://www.admecindia.co.in/course/best-jquery-master-course/" class="btn go-to-course-btn">Go to Course</a>
+        </div>
+    </div>
+</div>
+<div class="col-md-3 course-card" data-category="jquery" data-type="paid">
+    <div class="card">
+        <img src="know.jpeg"class="card-img-top" alt="Course Image">
+        <div class="card-body">
+            <h5 class="card-title">jquery(tka)</h5>
+            <p class="card-text">comprehensive jquery masterclass </p>
+            <a href="https://www.theknowledgeacademy.com/in/courses/app-and-web-development-training/javascript-jquery-masterclass/" class="btn go-to-course-btn">Go to Course</a>
+        </div>
+    </div>
+    </div>
+
+    <div class="col-md-3 course-card" data-category="jquery" data-type="paid">
+        <div class="card">
+            <img src="just.jpg" class="card-img-top" alt="Course Image">
+            <div class="card-body">
+                <h5 class="card-title">jquery(justacademy)</h5>
+                <p class="card-text">Comprehensive training focusing on dynamic and interactive web design using jQuery.</p>
+                <a href="https://www.justacademy.co/course-detail/jquery-training" class="btn go-to-course-btn">Go to Course</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 course-card" data-category="jquery" data-type="paid">
+        <div class="card">
+            <img src="plurals.jpeg" class="card-img-top" alt="Course Image">
+            <div class="card-body">
+                <h5 class="card-title">jquery(pluralsight)</h5>
+                <p class="card-text">This course covers the basics of jQuery, including DOM manipulation, event handling, and animations</p>
+                <a href="https://www.pluralsight.com/courses/jquery-fundamentals" class="btn go-to-course-btn">Go to Course</a>
+            </div>
+        </div>
+    </div>
+
+          <!-- j query free 1-->
+        <!-- Example of a Course Card -->
+        <div class="col-md-3 course-card" data-category="jquery" data-type="free">
+            <div class="card">
+                <img src="w3.jpg" class="card-img-top" alt="Course Image">
+                <div class="card-body">
+                    <h5 class="card-title">w3schools</h5>
+                    <p class="card-text">Learn the fundamentals of JQUERY in this free course.</p>
+                    <a href="https://www.w3schools.com/jquery/default.asp" class="btn go-to-course-btn">Go to Course</a>
+                </div>
+            </div>
+        </div>
+
+
+    <!-- j query free 2-->
+        <!-- Example of a Course Card -->
+        <div class="col-md-3 course-card" data-category="jquery" data-type="free">
+            <div class="card">
+                <img src="yt.jpg" class="card-img-top" alt="Course Image">
+                <div class="card-body">
+                    <h5 class="card-title">youtube</h5>
+                    <p class="card-text">Learn the fundamentals of JQUERY in this free course.</p>
+                    <a href="https://www.youtube.com/watch?v=Rkvn_MA04fo" class="btn go-to-course-btn">Go to Course</a>
+                </div>
+            </div>
+        </div>
+
+         
+        <!-- j query free 3-->
+        
+            <!-- Example of a Course Card -->
+            <div class="col-md-3 course-card" data-category="jquery" data-type="free">
+                <div class="card">
+                    <img src="pa.jpg" class="card-img-top" alt="Course Image">
+                    <div class="card-body">
+                        <h5 class="card-title">packpub</h5>
+                        <p class="card-text">Learn the fundamentals of JQUERY in this free course.</p>
+                        <a href="https://www.packtpub.com/en-us/product/the-complete-jquery-course-beginner-to-professional-97817896" class="btn go-to-course-btn">Go to Course</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- j query free 4-->
+            
+                <!-- Example of a Course Card -->
+                <div class="col-md-3 course-card" data-category="jquery" data-type="free">
+                    <div class="card">
+                        <img src="uda.jpg" class="card-img-top" alt="Course Image">
+                        <div class="card-body">
+                            <h5 class="card-title">udacity</h5>
+                            <p class="card-text">Learn the fundamentals of JQUERY in this free course.</p>
+                            <a href="https://www.udacity.com/course/intro-to-jquery%E2%80%93ud245" class="btn go-to-course-btn">Go to Course</a>
+                        </div>
+                    </div>
+                </div>
+                                <!-- j query free 5-->
+                    
+                        <!-- Example of a Course Card -->
+                        <div class="col-md-3 course-card" data-category="jquery" data-type="free">
+                            <div class="card">
+                                <img src="code.jpeg" class="card-img-top" alt="Course Image">
+                                <div class="card-body">
+                                    <h5 class="card-title">codecademy</h5>
+                                    <p class="card-text">Learn the fundamentals of JQUERY in this free course.</p>
+                                    <a href="https://www.codecademy.com/learn/learn-jquery" class="btn go-to-course-btn">Go to Course</a>
+                                </div>
+                            </div>
+                        </div>
+
+                         <!-- j query free 6-->
+                
+                        <!-- Example of a Course Card -->
+                        <div class="col-md-3 course-card" data-category="jquery" data-type="free">
+                            <div class="card">
+                                <img src="sl.jpg" class="card-img-top" alt="Course Image">
+                                <div class="card-body">
+                                    <h5 class="card-title">simplilearn</h5>
+                                    <p class="card-text">Learn the fundamentals of JQUERY in this free course.</p>
+                                    <a href="https://www.simplilearn.com/free-jquery-course-beginners-skil" class="btn go-to-course-btn">Go to Course</a>
+                                </div>
+                            </div>
+                        </div>
+
+                         <!-- j query free 7-->
+                    
+                        <!-- Example of a Course Card -->
+                        <div class="col-md-3 course-card" data-category="jquery" data-type="free">
+                            <div class="card">
+                                <img src="uda.jpg" class="card-img-top" alt="Course Image">
+                                <div class="card-body">
+                                    <h5 class="card-title">udacity</h5>
+                                    <p class="card-text">Learn the fundamentals of JQUERY in this free course.</p>
+                                    <a href="https://www.udacity.com/course/intro-to-jquery%E2%80%93ud245" class="btn go-to-course-btn">Go to Course</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- j query free 8-->
+                        
+                            <!-- Example of a Course Card -->
+                            <div class="col-md-3 course-card" data-category="jquery" data-type="free">
+                                <div class="card">
+                                    <img src="code.jpeg" class="card-img-top" alt="Course Image">
+                                    <div class="card-body">
+                                        <h5 class="card-title">codecademy</h5>
+                                        <p class="card-text">Learn the fundamentals of JQUERY in this free course.</p>
+                                        <a href="https://www.codecademy.com/learn/learn-jquery" class="btn go-to-course-btn">Go to Course</a>
+                                    </div>
+                                </div>
+                            </div>
+    
+                             <!-- j query free 9-->
+                        
+                            <!-- Example of a Course Card -->
+                            <div class="col-md-3 course-card" data-category="jquery" data-type="free">
+                                <div class="card">
+                                    <img src="w3schl.jpeg" class="card-img-top" alt="Course Image">
+                                    <div class="card-body">
+                                        <h5 class="card-title">w3schools</h5>
+                                        <p class="card-text">Learn the fundamentals of JQUERY in this free course.</p>
+                                        <a href="https://www.w3schools.com/jquery/default.asp" class="btn go-to-course-btn">Go to Course</a>
+                                    </div>
+                                </div>
+                            </div>
+    
+    
+                             <!-- j query free 10-->
+                    
+                            <!-- Example of a Course Card -->
+                            <div class="col-md-3 course-card" data-category="jquery" data-type="free">
+                                <div class="card">
+                                    <img src="mgr.jpg" class="card-img-top" alt="Course Image">
+                                    <div class="card-body">
+                                        <h5 class="card-title">my great learning</h5>
+                                        <p class="card-text">Learn the fundamentals of JQUERY in this free course.</p>
+                                        <a href="https://www.mygreatlearning.com/academy/learn-for-free/courses/jquery-tutorial" class="btn go-to-course-btn">Go to Course</a>
+                                    </div>
+                                </div>
+                            </div>    
+                           <!-- jquery paid 1
+<div id="courseList" class="row">-->
+    <!-- Example of a Course Card -->
+    <div class="col-md-3 course-card" data-category="jquery" data-type="paid">
+        <div class="card">
+            <img src="udemy.jpeg" class="card-img-top" alt="Course Image">
+            <div class="card-body">
+                <h5 class="card-title">udemy</h5>
+                <p class="card-text">Learn the fundamentals of JQUERY in this paid course.</p>
+                <a href="https://www.udemy.com/course/jquery-fundamentals-bootcamp-learn-how-to-use-jquery/" class="btn go-to-course-btn">Go to Course</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- jquery paid  2 -->
+
+    <!-- Example of a Course Card -->
+    <div class="col-md-3 course-card" data-category="jquery" data-type="paid">
+        <div class="card">
+            <img src="coursera.jpeg" class="card-img-top" alt="Course Image">
+            <div class="card-body">
+                <h5 class="card-title">coursera</h5>
+                <p class="card-text">Learn the fundamentals of JQUERY in this paid course.</p>
+                <a href="https://www.coursera.org/courses?query=jquery" class="btn go-to-course-btn">Go to Course</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- jquery paid 3 -->
+
+    <!-- Example of a Course Card -->
+    <div class="col-md-3 course-card" data-category="jquery" data-type="paid">
+        <div class="card">
+            <img src="udemy.jpeg" class="card-img-top" alt="Course Image">
+            <div class="card-body">
+                <h5 class="card-title">udemy</h5>
+                <p class="card-text">Learn the fundamentals of JQUERY  beginers level in this paid course.</p>
+                <a href="https://www.udemy.com/course/complete-jquery-course-learn-from-beginner-to-advan" class="btn go-to-course-btn">Go to Course</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- j query paid 4 -->
+
+    <!-- Example of a Course Card -->
+    <div class="col-md-3 course-card" data-category="jquery" data-type="paid">
+        <div class="card">
+            <img src="jf.jpg" class="card-img-top" alt="Course Image">
+            <div class="card-body">
+                <h5 class="card-title">jellyfish</h5>
+                <p class="card-text">Learn the fundamentals of JQUERY in this paid course.</p>
+                <a href="https://www.jellyfish.com/en-us/training/courses/javascript-and-jquer" class="btn go-to-course-btn">Go to Course</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- j query paid 5 -->
+
+    <!-- Example of a Course Card -->
+    <div class="col-md-3 course-card" data-category="jquery" data-type="paid">
+        <div class="card">
+            <img src="udemy.jpeg" class="card-img-top" alt="Course Image">
+            <div class="card-body">
+                <h5 class="card-title">udemy</h5>
+                <p class="card-text">Learn the fundamentals of JQUERY  intermediate level in this paid course.</p>
+                <a href="https://www.udemy.com/course/jquery-fundamentals-bootcamp-learn-how-to-use-jquery/" class="btn go-to-course-btn">Go to Course</a>
+            </div>
+        </div>
+    </div>
+<!-- j query paid 6 -->
+
+    <!-- Example of a Course Card -->
+    <div class="col-md-3 course-card" data-category="jquery" data-type="paid">
+        <div class="card">
+            <img src="udemy.jpeg" class="card-img-top" alt="Course Image">
+            <div class="card-body">
+                <h5 class="card-title">udemy</h5>
+                <p class="card-text">Learn the fundamentals of JQUERY  in advanced  level in this paid course.</p>
+                <a href="https://www.udemy.com/course/jquery-complete-jquery-course-from-beginner-to-advanced/" class="btn go-to-course-btn">Go to Course</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- j query paid 7 -->
+
+    <!-- Example of a Course Card -->
+    <div class="col-md-3 course-card" data-category="jquery" data-type="paid">
+        <div class="card">
+            <img src="pa.jpg" class="card-img-top" alt="Course Image">
+            <div class="card-body">
+                <h5 class="card-title">packpub</h5>
+                <p class="card-text">Learn the fundamentals of JQUERY in this paid course.</p>
+                <a href="https://www.packtpub.com/product/the-complete-jquery-course-beginner-to-professional-video/9781789612837" class="btn go-to-course-btn">Go to Course</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- j query paid 8 -->
+
+    <!-- Example of a Course Card -->
+    <div class="col-md-3 course-card" data-category="jquery" data-type="paid">
+        <div class="card">
+            <img src="jf.jpg" class="card-img-top" alt="Course Image">
+            <div class="card-body">
+                <h5 class="card-title">jellyfish</h5>
+                <p class="card-text">Learn the fundamentals of JQUERY in this paid course.</p>
+                <a href="https://www.jellyfish.com/en-us/training/courses/javascript-and-jquery" class="btn go-to-course-btn">Go to Course</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- j query paid 9 -->
+
+    <!-- Example of a Course Card -->
+    <div class="col-md-3 course-card" data-category="jquery" data-type="paid">
+        <div class="card">
+            <img src="udemy.jpeg" class="card-img-top" alt="Course Image">
+            <div class="card-body">
+                <h5 class="card-title">udemy</h5>
+                <p class="card-text">Learn the fundamentals of JQUERY in advanced level in this paid course.</p>
+                <a href="https://www.udemy.com/course/jquery-complete-jquery-course-from-beginner-to-advanced/" class="btn go-to-course-btn">Go to Course</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- j query paid 10 -->
+
+    <!-- Example of a Course Card -->
+    <div class="col-md-3 course-card" data-category="jquery" data-type="paid">
+        <div class="card">
+            <img src="w3.jpg" class="card-img-top" alt="Course Image">
+            <div class="card-body">
+                <h5 class="card-title">w3schools</h5>
+                <p class="card-text"> w3schools is here to provide you to Learn the fundamentals of JQUERY in this paid course.</p>
+                    <a href="https://campus.w3schools.com/products/jquery-course" class="btn go-to-course-btn">Go to Course</a>
+                </div>
+            </div>
+        </div>
+        
+    
+
+
+<script>
+       
+    
+    document.addEventListener("DOMContentLoaded", function () {
+      const buttons = document.querySelectorAll(".filter-btn");
+      const courses = document.querySelectorAll(".course-card");
+      const heading = document.getElementById("courseHeading");
+  
+      buttons.forEach(button => {
+        button.addEventListener("click", () => {
+          const selectedType = button.getAttribute("data-type");
+  
+          // Update Heading
+          heading.textContent = selectedType === "free" ? "Free jQuery Courses" : "Paid jQuery Courses";
+  
+          // Show/Hide Courses
+          courses.forEach(course => {
+            const courseType = course.getAttribute("data-type");
+            if (courseType === selectedType) {
+              course.style.display = "block";
+            } else {
+              course.style.display = "none";
+            }
+          });
+        });
+      });
+    });
+  
+  
+      </script>
+  </body>
+  </html>

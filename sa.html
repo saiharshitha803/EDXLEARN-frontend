@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EdxLearn UI</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #1f1f1f;
+      --tab-bg: #f1f3f5;
+      --tab-active: #d2fdd9;
+    }
+
+    [data-theme="dark"] {
+      --bg-color: #1e1e1e;
+      --text-color: #f0f0f0;
+      --tab-bg: #2c2c2c;
+      --tab-active: #3d6b43;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .header-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .header-buttons i {
+      font-size: 1.2rem;
+      margin-left: 1rem;
+      cursor: pointer;
+      color: var(--text-color);
+    }
+
+    .search-box {
+      margin: 1rem;
+      display: flex;
+      align-items: center;
+      background-color: var(--tab-bg);
+      padding: 0.5rem 1rem;
+      border-radius: 10px;
+    }
+
+    .search-box i {
+      margin-right: 0.5rem;
+      color: #888;
+    }
+
+    .search-box input {
+      border: none;
+      outline: none;
+      background: transparent;
+      font-size: 1rem;
+      color: var(--text-color);
+      width: 100%;
+    }
+
+    .tabs {
+      display: flex;
+      gap: 0.5rem;
+      margin: 0 1rem 1rem 1rem;
+      flex-wrap: wrap;
+    }
+
+    .tab {
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      background-color: var(--tab-bg);
+      cursor: pointer;
+    }
+
+    .tab.active {
+      background-color: var(--tab-active);
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="header-title">EdxLearn</div>
+    <div class="header-buttons">
+      <i class="fas fa-circle-info" title="About"></i>
+      <i id="theme-toggle" class="fas fa-moon" title="Toggle Theme"></i>
+      <i class="fas fa-sign-out-alt" title="Logout"></i>
+    </div>
+  </div>
+
+  <div class="search-box">
+    <i class="fas fa-search"></i>
+    <input type="text" placeholder="Search" />
+  </div>
+
+  <div class="tabs">
+    <div class="tab active">HTML</div>
+    <div class="tab">CSS</div>
+    <div class="tab">JavaScript</div>
+    <div class="tab">PHP</div>
+    <div class="tab">Bootstrap</div>
+    <div class="tab">React</div>
+  </div>
+
+  <script>
+    const themeBtn = document.getElementById('theme-toggle');
+    const html = document.documentElement;
+
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    html.setAttribute('data-theme', savedTheme);
+    themeBtn.className = savedTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+
+    themeBtn.addEventListener('click', () => {
+      const current = html.getAttribute('data-theme');
+      const newTheme = current === 'light' ? 'dark' : 'light';
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      themeBtn.className = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+    });
+
+    const tabs = document.querySelectorAll('.tab');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+      });
+    });
+  </script>
+
+</body>
+</html>

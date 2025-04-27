@@ -1,0 +1,411 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PHP Courses</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding: 2rem;
+        }
+        .course-card {
+            margin-bottom: 20px;
+        }
+        .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+  background-color: rgb(222, 37, 222); /* <-- Add this line */
+  color: white; /* Optional: Makes text/icons visible on purple */
+     }
+
+    
+
+    .header-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .header-buttons i {
+      font-size: 1.2rem;
+      margin-left: 1rem;
+      cursor: pointer;
+      color: var(--text-color);
+    }
+    .go-to-course-btn {
+    background: linear-gradient(135deg, #ff00cc, #3333ff); /* Pink to Purple gradient */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  .go-to-course-btn:hover {
+    background: linear-gradient(135deg, #ff66d9, #6666ff); /* Lighter on hover */
+    transform: scale(1.05); /* Small zoom effect */
+  }
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-title">EdxLearn</div>
+        <div class="header-buttons">
+          <i class="fas fa-circle-info" title="About"></i>
+          <i id="theme-toggle" class="fas fa-moon" title="Toggle Theme"></i>
+          <i class="fas fa-sign-out-alt" title="Logout"></i>
+        </div>
+      </div>
+  
+    <div class="text-center my-4">
+        <button class="btn btn-outline-success filter-btn" data-type="free">Show Free Courses</button>
+        <button class="btn btn-outline-danger filter-btn" data-type="paid">Show Paid Courses</button>
+      </div>
+      
+      <h2 id="courseHeading" class="text-center mb-4">All PHP Courses</h2>
+      
+      <div id="courseList" class="row">
+        <!-- All your free & paid course cards go here -->
+    
+                       
+
+
+
+
+<!-- php paid 1-->
+
+    <!-- Example of a Course Card -->
+    <div class="col-md-3 course-card" data-category="php" data-type="paid">
+        <div class="card">
+            <img src="coursera.jpeg" class="card-img-top" alt="Course Image">
+            <div class="card-body">
+                <h5 class="card-title">coursera</h5>
+                <p class="card-text">coursera presents you to Learn the fundamentals of PHP in this paid course.</p>
+                <a href="https://www.coursera.org/learn/laravel-framework-and-php" class="btn go-to-course-btn">Go to Course</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- php paid 2-->
+
+    <!-- Example of a Course Card -->
+    <div class="col-md-3 course-card" data-category="php" data-type="paid">
+        <div class="card">
+            <img src="udemy.jpeg" class="card-img-top" alt="Course Image">
+            <div class="card-body">
+                <h5 class="card-title">udemy</h5>
+                <p class="card-text">Learn the fundamentals of PHP in this paid course.</p>
+                <a href="https://www.udemy.com/course/php-from-scratch-course/" class="btn go-to-course-btn">Go to Course</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- php paid 3-->
+
+    <!-- Example of a Course Card -->
+    <div class="col-md-3 course-card" data-category="php" data-type="paid">
+        <div class="card">
+            <img src="linkedin.jpeg" class="card-img-top" alt="Course Image">
+            <div class="card-body">
+                <h5 class="card-title">linkedin</h5>
+                <p class="card-text"> top rated website to learn the fundamentals of PHP in this paid course.</p>
+                <a href="https://www.linkedin.com/learning/advanced-php-debugging-techniques-14917698" class="btn go-to-course-btn">Go to Course</a>
+            </div>
+        </div>
+    </div>
+1
+    <!-- php paid 4-->
+
+    <!-- Example of a Course Card -->
+    <div class="col-md-3 course-card" data-category="php" data-type="paid">
+        <div class="card">
+            <img src="code.jpeg" class="card-img-top" alt="Course Image">
+            <div class="card-body">
+                <h5 class="card-title">codecademy</h5>
+                <p class="card-text">Learn the fundamentals of PHP in this paid course.</p>
+                <a href="https://www.codecademy.com/learn/learn-php" class="btn go-to-course-btn">Go to Course</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- php paid 5-->
+
+    <!-- Example of a Course Card -->
+    <div class="col-md-3 course-card" data-category="php" data-type="paid">
+        <div class="card">
+            <img src="sl.jpg" class="card-img-top" alt="Course Image">
+            <div class="card-body">
+                <h5 class="card-title">simplilearn</h5>
+                <p class="card-text">Learn the fundamentals of PHP in this paid course.</p>
+                <a href="https://www.simplilearn.com/php-training-course" class="btn go-to-course-btn">Go to Course</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- php paid 6-->
+
+    <!-- Example of a Course Card -->
+    <div class="col-md-3 course-card" data-category="php" data-type="paid">
+        <div class="card">
+            <img src="udemy.jpeg" class="card-img-top" alt="Course Image">
+            <div class="card-body">
+                <h5 class="card-title">udemy</h5>
+                <p class="card-text">Learn the fundamentals of PHP also with SQL in this paid course.</p>
+                <a href="https://www.udemy.com/course/php-for-complete-beginners-includes-msql-object-oriented/" class="btn go-to-course-btn">Go to Course</a>
+            </div>
+        </div>
+    </div>
+    <!-- php paid 7-->
+    <!-- Example of a Course Card -->
+    <div class="col-md-3 course-card" data-category="php" data-type="paid">
+        <div class="card">
+            <img src="udemy.jpeg" class="card-img-top" alt="Course Image">
+            <div class="card-body">
+                <h5 class="card-title">udemy</h5>
+                <p class="card-text">Learn the fundamentals of PHP in this paid course.in intermediate level</p>
+                <a href="https://www.udemy.com/course/php-for-beginners-build-a-content-management-system/" class="btn go-to-course-btn">Go to Course</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- php paid 8-->
+
+    <!-- Example of a Course Card -->
+    <div class="col-md-3 course-card" data-category="php" data-type="paid">
+        <div class="card">
+            <img src="coursera.jpeg" class="card-img-top" alt="Course Image">
+            <div class="card-body">
+                <h5 class="card-title">coursera</h5>
+                <p class="card-text">Learn the fundamentals of PHP in this paid course.</p>
+                <a href="https://www.coursera.org/projects/automobile-listing-php" class="btn go-to-course-btn">Go to Course</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- php paid 9-->
+
+    <!-- Example of a Course Card -->
+    <div class="col-md-3 course-card" data-category="php" data-type="paid">
+        <div class="card">
+            <img src="udemy.jpeg" class="card-img-top" alt="Course Image">
+            <div class="card-body">
+                <h5 class="card-title">udemy</h5>
+                <p class="card-text">Learn the fundamentals of PHP in this paid course.find good results.</p>
+                <a href="https://www.udemy.com/course/php-for-complete-beginners-includes-msql-object-oriented/" class="btn go-to-course-btn">Go to Course</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- php paid 10-->
+
+    <!-- Example of a Course Card -->
+    <div class="col-md-3 course-card" data-category="php" data-type="paid">
+        <div class="card">
+            <img src="w3.jpg" class="card-img-top" alt="Course Image">
+            <div class="card-body">
+                <h5 class="card-title">w3schools</h5>
+                <p class="card-text">Learn the fundamentals of PHP in this paid course.</p>
+                <a href="https://campus.w3schools.com/products/php-course" class="btn go-to-course-btn">Go to Course</a>
+            </div>
+        </div>
+    </div>
+
+     <!-- php free 1-->
+
+    <!-- Example of a Course Card -->
+    <div class="col-md-3 course-card" data-category="php" data-type="free">
+        <div class="card">
+            <img src="coursera.jpeg" class="card-img-top" alt="Course Image">
+            <div class="card-body">
+                <h5 class="card-title">coursera</h5>
+                <p class="card-text">Learn the fundamentals of PHP in this free course.</p>
+                <a href="https://www.coursera.org/learn/web-applications-php" class="btn go-to-course-btn">Go to Course</a>
+            </div>
+        </div>
+    </div>
+
+     <!-- php free 2-->
+
+    <!-- Example of a Course Card -->
+    <div class="col-md-3 course-card" data-category="php" data-type="free">
+        <div class="card">
+            <img src="w3.jpg" class="card-img-top" alt="Course Image">
+            <div class="card-body">
+                <h5 class="card-title">w3schools</h5>
+                <p class="card-text">Learn the fundamentals of PHP in this free course.</p>
+                <a href="https://www.w3schools.com/php/" class="btn go-to-course-btn">Go to Course</a>
+            </div>
+        </div>
+    </div>
+
+     <!-- php free 3-->
+
+    <!-- Example of a Course Card -->
+    <div class="col-md-3 course-card" data-category="php" data-type="free">
+        <div class="card">
+            <img src="yt.jpg" class="card-img-top" alt="Course Image">
+            <div class="card-body">
+                <h5 class="card-title">youtube</h5>
+                <p class="card-text">Learn the fundamentals of PHP in this free course.</p>
+                <a href="https://www.youtube.com/playlist?list=PL0eyrZgxdwhwwQQZA79OzYwl5ewA7HQih" class="btn go-to-course-btn">Go to Course</a>
+            </div>
+        </div>
+    </div>
+
+     <!-- php free 4-->
+
+    <!-- Example of a Course Card -->
+    <div class="col-md-3 course-card" data-category="php" data-type="free">
+        <div class="card">
+            <img src="code.jpeg" class="card-img-top" alt="Course Image">
+            <div class="card-body">
+                <h5 class="card-title">free code camp</h5>
+                <p class="card-text">Learn the fundamentals of PHP in this free course.fcc helps you</p>
+                <a href="https://www.freecodecamp.org/news/the-php-handbook/" class="btn go-to-course-btn">Go to Course</a>
+            </div>
+        </div>
+    </div>
+
+     <!-- php free 5-->
+
+    <!-- Example of a Course Card -->
+    <div class="col-md-3 course-card" data-category="php" data-type="free">
+        <div class="card">
+            <img src="linkedin.jpeg" class="card-img-top" alt="Course Image">
+            <div class="card-body">
+                <h5 class="card-title">linkedin</h5>
+                <p class="card-text">Learn the fundamentals of PHP in this free course.</p>
+                <a href="https://www.linkedin.com/learning/php-essential-training-2017" class="btn go-to-course-btn">Go to Course</a>
+            </div>
+        </div>
+    </div>
+
+<!-- php free 6-->
+
+    <!-- Example of a Course Card -->
+    <div class="col-md-3 course-card" data-category="php" data-type="free">
+        <div class="card">
+            <img src="yt.jpg" class="card-img-top" alt="Course Image">
+            <div class="card-body">
+                <h5 class="card-title">youtube</h5>
+                <p class="card-text">Learn the fundamentals of PHP in this free course.fast results.</p>
+                <a href="https://www.youtube.com/watch?v=OK_JCtrrv-c" class="btn go-to-course-btn">Go to Course</a>
+            </div>
+        </div>
+    </div>
+
+     <!-- php free 7-->
+    <!-- Example of a Course Card -->
+    <div class="col-md-3 course-card" data-category="php" data-type="free">
+        <div class="card">
+            <img src="w3.jpg" class="card-img-top" alt="Course Image">
+            <div class="card-body">
+                <h5 class="card-title">w3schools</h5>
+                <p class="card-text">Learn the fundamentals of PHP in this free course.</p>
+                <a href="https://www.w3schools.com/php/php_exercises.asp" class="btn go-to-course-btn">Go to Course</a>
+            </div>
+        </div>
+    </div>
+
+
+     <!-- php free 8-->
+    <!-- Example of a Course Card -->
+    <div class="col-md-3 course-card" data-category="php" data-type="free">
+        <div class="card">
+            <img src="gfg.jpeg" class="card-img-top" alt="Course Image">
+            <div class="card-body">
+                <h5 class="card-title">geeksforgeeks</h5>
+                <p class="card-text">Learn the fundamentals of PHP in this free course.</p>
+                <a href="https://www.geeksforgeeks.org/php-tutorial/" class="btn go-to-course-btn">Go to Course</a>
+            </div>
+        </div>
+    </div>
+
+
+     <!-- php free 9-->
+
+    <!-- Example of a Course Card -->
+    <div class="col-md-3 course-card" data-category="php" data-type="free">
+        <div class="card">
+            <img src="mgr.jpg" class="card-img-top" alt="Course Image">
+            <div class="card-body">
+                <h5 class="card-title">mygreatlearning</h5>
+                <p class="card-text">Learn the fundamentals of PHP in this free course.</p>
+                <a href="https://www.mygreatlearning.com/academy/learn-for-free/courses/php-for-beginners" class="btn go-to-course-btn">Go to Course</a>
+            </div>
+        </div>
+    </div>
+
+
+     <!-- php free 10-->
+
+    <!-- Example of a Course Card -->
+    <div class="col-md-3 course-card" data-category="php" data-type="free">
+        <div class="card">
+            <img src="edx.jpeg" class="card-img-top" alt="Course Image">
+            <div class="card-body">
+                <h5 class="card-title">EDX</h5>
+                <p class="card-text">Learn the fundamentals of PHP in this free course.</p>
+                <a href="https://www.edx.org/learn/cakephp" class="btn go-to-course-btn">Go to Course</a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+<script>
+       
+    
+    document.addEventListener("DOMContentLoaded", function () {
+      const buttons = document.querySelectorAll(".filter-btn");
+      const courses = document.querySelectorAll(".course-card");
+      const heading = document.getElementById("courseHeading");
+  
+      buttons.forEach(button => {
+        button.addEventListener("click", () => {
+          const selectedType = button.getAttribute("data-type");
+  
+          // Update Heading
+          heading.textContent = selectedType === "free" ? "Free PHP Courses" : "Paid PHP Courses";
+  
+          // Show/Hide Courses
+          courses.forEach(course => {
+            const courseType = course.getAttribute("data-type");
+            if (courseType === selectedType) {
+              course.style.display = "block";
+            } else {
+              course.style.display = "none";
+            }
+          });
+        });
+      });
+    });
+  
+  
+      </script>
+  </body>
+  </html>

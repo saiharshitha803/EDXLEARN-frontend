@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Courses</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding: 2rem;
+        }
+        .course-card {
+            margin-bottom: 20px;
+        }
+        .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+  background-color: rgb(222, 37, 222); /* <-- Add this line */
+  color: white; /* Optional: Makes text/icons visible on purple */
+     }
+
+    
+
+    .header-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .header-buttons i {
+      font-size: 1.2rem;
+      margin-left: 1rem;
+      cursor: pointer;
+      color: var(--text-color);
+    }
+    .go-to-course-btn {
+    background: linear-gradient(135deg, #ff00cc, #3333ff); /* Pink to Purple gradient */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  .go-to-course-btn:hover {
+    background: linear-gradient(135deg, #ff66d9, #6666ff); /* Lighter on hover */
+    transform: scale(1.05); /* Small zoom effect */
+  }
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-title">EdxLearn</div>
+        <div class="header-buttons">
+          <i class="fas fa-circle-info" title="About"></i>
+          <i id="theme-toggle" class="fas fa-moon" title="Toggle Theme"></i>
+          <i class="fas fa-sign-out-alt" title="Logout"></i>
+        </div>
+      </div>
+    
+    <div class="text-center my-4">
+        <button class="btn btn-outline-success filter-btn" data-type="free">Show Free Courses</button>
+        <button class="btn btn-outline-danger filter-btn" data-type="paid">Show Paid Courses</button>
+      </div>
+      
+      <h2 id="courseHeading" class="text-center mb-4">All CSS Courses</h2>
+      
+      <div id="courseList" class="row">
+        <div class="col-md-3 course-card" data-category="css" data-type="free">
+            <div class="card">
+                <img src="front.jpeg" class="card-img-top" alt="Course Image">
+                <div class="card-body">
+                    <h5 class="card-title">frontendmentor</h5>
+                    <p class="card-text">A deep dive into CSS Flexbox for layout design with frontendmentor (Free).</p>
+                    <a href="https://www.frontendmentor.io/" class="btn go-to-course-btn">Go to Course</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-3 course-card" data-category="css" data-type="free">
+            <div class="card">
+                <img src="tree.jpeg" class="card-img-top" alt="Course Image">
+                <div class="card-body">
+                    <h5 class="card-title">teamtreehouse</h5>
+                    <p class="card-text">A deep dive into CSS Flexbox for layout design with teamtreehouse (Free).</p>
+                    <a href="https://teamtreehouse.com/library/introduction-to-html-and-css-2" class="btn go-to-course-btn">Go to Course</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-3 course-card" data-category="css" data-type="free">
+            <div class="card">
+                <img src="codepen.jpeg" class="card-img-top" alt="Course Image">
+                <div class="card-body">
+                    <h5 class="card-title">codepen</h5>
+                    <p class="card-text">A deep dive into CSS Flexbox for layout design with codepen (Free).</p>
+                    <a href="https://codepen.io/team/css-tricks" class="btn go-to-course-btn">Go to Course</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-3 course-card" data-category="css" data-type="free">
+            <div class="card">
+                <img src="zengarden.jpeg" class="card-img-top" alt="Course Image">
+                <div class="card-body">
+                    <h5 class="card-title">cssgridgarden</h5>
+                    <p class="card-text">A deep dive into CSS Flexbox for layout design with cssgridgarden (Free).</p>
+                    <a href="https://cssgridgarden.com/" class="btn go-to-course-btn">Go to Course</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-3 course-card" data-category="css" data-type="free">
+            <div class="card">
+                <img src="flexfrog.jpg" class="card-img-top" alt="Course Image">
+                <div class="card-body">
+                    <h5 class="card-title">flexboxfroggy</h5>
+                    <p class="card-text">A deep dive into CSS Flexbox for layout design with codepen (Free).</p>
+                    <a href="https://flexboxfroggy.com/" class="btn go-to-course-btn">Go to Course</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-3 course-card" data-category="css" data-type="free">
+            <div class="card">
+                <img src="deck.jpg" class="card-img-top" alt="Course Image">
+                <div class="card-body">
+                    <h5 class="card-title">cssdeck</h5>
+                    <p class="card-text">A deep dive into CSS Flexbox for layout design with codepen (Free).</p>
+                    <a href="https://cssdeck.com/" class="btn go-to-course-btn">Go to Course</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-3 course-card" data-category="css" data-type="free">
+            <div class="card">
+                <img src="cssref.jpeg" class="card-img-top" alt="Course Image">
+                <div class="card-body">
+                    <h5 class="card-title">cssreference</h5>
+                    <p class="card-text">A deep dive into CSS Flexbox for layout design with codepen (Free).</p>
+                    <a href="https://cssreference.io/" class="btn go-to-course-btn">Go to Course</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 course-card" data-category="css" data-type="free">
+            <div class="card">
+                <img src="ca.webp" class="card-img-top" alt="Course Image">
+                <div class="card-body">
+                    <h5 class="card-title">learn-css.org</h5>
+                    <p class="card-text">A deep dive into CSS Flexbox for layout design with codepen (Free).</p>
+                    <a href="https://learn-css.org/" class="btn go-to-course-btn">Go to Course</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 course-card" data-category="css" data-type="free">
+            <div class="card">
+                <img src="zengarden.jpeg" class="card-img-top" alt="Course Image">
+                <div class="card-body">
+                    <h5 class="card-title">csszengarden/h5>
+                    <p class="card-text">A deep dive into CSS Flexbox for layout design with codepen (Free).</p>
+                    <a href="https://www.csszengarden.com/" class="btn go-to-course-btn">Go to Course</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-3 course-card" data-category="css" data-type="free">
+            <div class="card">
+                <img src="dc.jpg" class="card-img-top" alt="Course Image">
+                <div class="card-body">
+                    <h5 class="card-title">designcode</h5>
+                    <p class="card-text">A deep dive into CSS Flexbox for layout design with codepen (Free).</p>
+                    <a href="https://designcode.io/css" class="btn go-to-course-btn">Go to Course</a>
+                </div>
+            </div>
+        </div>            
+
+
+
+<div class="col-md-3 course-card" data-category="css" data-type="free">
+<div class="card">
+    <img src="w3.jpg" class="card-img-top" alt="Course Image">
+    <div class="card-body">
+        <h5 class="card-title">w3schools</h5>
+        <p class="card-text">A deep dive into CSS Flexbox for layout design (Free).</p>
+        <a href="https://www.w3schools.com/css/" class="btn go-to-course-btn">Go to Course</a>
+    </div>
+</div>
+</div>
+<div class="col-md-3 course-card" data-category="css" data-type="free">
+<div class="card">
+    <img src="free.jpeg" class="card-img-top" alt="Course Image">
+    <div class="card-body">
+        <h5 class="card-title">Freecodecamp</h5>
+        <p class="card-text">learn css from FCC (Free).</p>
+        <a href="https://www.freecodecamp.org/" class="btn go-to-course-btn">Go to Course</a>
+    </div>
+</div>
+</div>
+<div class="col-md-3 course-card" data-category="css" data-type="free">
+<div class="card">
+    <img src="mozilla.jpeg" class="card-img-top" alt="Course Image">
+    <div class="card-body">
+        <h5 class="card-title">mozilla</h5>
+        <p class="card-text">mozilla is here to help you (Free).</p>
+        <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics" class="btn go-to-course-btn">Go to Course</a>
+    </div>
+</div>
+</div>
+<div class="col-md-3 course-card" data-category="css" data-type="free">
+<div class="card">
+    <img src="wb.jpg" class="card-img-top" alt="Course Image">
+    <div class="card-body">
+        <h5 class="card-title">webdev</h5>
+        <p class="card-text">A deep dive into CSS Flexbox for layout design (Free).</p>
+        <a href="https://web.dev/learn/css/" class="btn go-to-course-btn">Go to Course</a>
+    </div>
+</div>
+</div>
+<div class="col-md-3 course-card" data-category="css" data-type="free">
+<div class="card">
+    <img src="coursera.jpeg" class="card-img-top" alt="Course Image">
+    <div class="card-body">
+        <h5 class="card-title">Coursera</h5>
+        <p class="card-text">learn css from coursera (Free).</p>
+        <a href="https://www.coursera.org/" class="btn go-to-course-btn">Go to Course</a>
+    </div>
+</div>
+</div>
+<div class="col-md-3 course-card" data-category="css" data-type="free">
+<div class="card">
+    <img src="code.jpeg" class="card-img-top" alt="Course Image">
+    <div class="card-body">
+        <h5 class="card-title">Codecademy</h5>
+        <p class="card-text">chance to learn css from codecademy(Free).</p>
+        <a href="https://www.codecademy.com/learn/learn-css" class="btn go-to-course-btn">Go to Course</a>
+    </div>
+</div>
+</div>
+<div class="col-md-3 course-card" data-category="css" data-type="free">
+<div class="card">
+    <img src="edx.jpeg" class="card-img-top" alt="Course Image">
+    <div class="card-body">
+        <h5 class="card-title">EDX</h5>
+        <p class="card-text">EDX provides you css to learn(Free).</p>
+        <a href="https://www.edx.org/search?q=Css" class="btn go-to-course-btn">Go to Course</a>
+    </div>
+</div>
+</div>
+<div class="col-md-3 course-card" data-category="css" data-type="free">
+<div class="card">
+    <img src="scrimba.jpeg" class="card-img-top" alt="Course Image">
+    <div class="card-body">
+        <h5 class="card-title">scrimba</h5>
+        <p class="card-text">A deep dive into CSS Flexbox for layout design with scrimba (Free).</p>
+        <a href="https://scrimba.com/t0css" class="btn go-to-course-btn">Go to Course</a>
+    </div>
+</div>
+</div>
+
+
+<div class="col-md-3 course-card" data-category="css" data-type="paid">
+<div class="card">
+    <img src="front.jpeg" class="card-img-top" alt="Course Image">
+    <div class="card-body">
+        <h5 class="card-title">frontendmasters</h5>
+        <p class="card-text">A deep dive into CSS Flexbox for layout design using frontendmasters (Paid).</p>
+        <a href="https://frontendmasters.com/courses/css-foundations/" class="btn go-to-course-btn">Go to Course</a>
+    </div>
+</div>
+</div>  
+
+<div class="col-md-3 course-card" data-category="css" data-type="paid">
+<div class="card">
+    <img src="ss.jpeg" class="card-img-top" alt="Course Image">
+    <div class="card-body">
+        <h5 class="card-title">skillshare</h5>
+        <p class="card-text">A deep dive into CSS Flexbox for layout design using skillshare (Paid).</p>
+        <a href="https://www.skillshare.com/en/search?query=css" class="btn go-to-course-btn">Go to Course</a>
+    </div>
+</div>
+</div>  
+
+<div class="col-md-3 course-card" data-category="css" data-type="paid">
+<div class="card">
+    <img src="sitepoint_logo_icon_169750.png" class="card-img-top" alt="Course Image">
+    <div class="card-body">
+        <h5 class="card-title">sitepoint</h5>
+        <p class="card-text">A deep dive into CSS Flexbox for layout design using sitepoint (Paid).</p>
+        <a href="https://www.sitepoint.com/premium/courses/css-masterclass-2897/" class="btn go-to-course-btn">Go to Course</a>
+    </div>
+</div>
+</div>  
+
+<div class="col-md-3 course-card" data-category="css" data-type="paid">
+<div class="card">
+    <img src="tutsplus.png" class="card-img-top" alt="Course Image">
+    <div class="card-body">
+        <h5 class="card-title">tutsplus</h5>
+        <p class="card-text">A deep dive into CSS Flexbox for layout design using tutsplus (Paid).</p>
+        <a href="https://tutsplus.com/t/courses" class="btn go-to-course-btn">Go to Course</a>
+    </div>
+</div>
+</div>  
+
+<div class="col-md-3 course-card" data-category="css" data-type="paid">
+<div class="card">
+    <img src="egg.jpeg" class="card-img-top" alt="Course Image">
+    <div class="card-body">
+        <h5 class="card-title">egghead</h5>
+        <p class="card-text">A deep dive into CSS Flexbox for layout design using egghead (Paid).</p>
+        <a href="https://egghead.io/q/css" class="btn go-to-course-btn">Go to Course</a>
+    </div>
+</div>
+</div>  
+
+<div class="col-md-3 course-card" data-category="css" data-type="paid">
+<div class="card">
+    <img src="chegg.jpg" class="card-img-top" alt="Course Image">
+    <div class="card-body">
+        <h5 class="card-title">chegg</h5>
+        <p class="card-text">A deep dive into CSS Flexbox for layout design using chegg (Paid).</p>
+        <a href="https://www.chegg.com/skills/" class="btn go-to-course-btn">Go to Course</a>
+    </div>
+</div>
+</div>  
+
+<div class="col-md-3 course-card" data-category="css" data-type="paid">
+<div class="card">
+    <img src="orielly.jpg" class="card-img-top" alt="Course Image">
+    <div class="card-body">
+        <h5 class="card-title">oreill</h5>
+        <p class="card-text">A deep dive into CSS Flexbox for layout design using oreilly (Paid).</p>
+        <a href="https://www.oreilly.com/library/view/css-the-definitive/9781098117603/" class="btn go-to-course-btn">Go to Course</a>
+    </div>
+</div>
+</div>  
+<div class="col-md-3 course-card" data-category="css" data-type="paid">
+<div class="card">
+    <img src="ga.jpeg" class="card-img-top" alt="Course Image">
+    <div class="card-body">
+        <h5 class="card-title">generalassemb</h5>
+        <p class="card-text">A deep dive into CSS Flexbox for layout design using generalassemb (Paid).</p>
+        <a href="https://generalassemb.ly/students/events?topic=css&location=online" class="btn go-to-course-btn">Go to Course</a>
+    </div>
+</div>
+</div>  
+
+<div class="col-md-3 course-card" data-category="css" data-type="paid">
+<div class="card">
+    <img src="wes.png" class="card-img-top" alt="Course Image">
+    <div class="card-body">
+        <h5 class="card-title">wesbos</h5>
+        <p class="card-text">A deep dive into CSS Flexbox for layout design using wesbos (Paid).</p>
+        <a href="https://wesbos.com/courses" class="btn go-to-course-btn">Go to Course</a>
+    </div>
+</div>
+</div>  
+
+<div class="col-md-3 course-card" data-category="css" data-type="paid">
+<div class="card">
+    <img src="uda.jpg" class="card-img-top" alt="Course Image">
+    <div class="card-body">
+        <h5 class="card-title">udacity</h5>
+        <p class="card-text">A deep dive into CSS Flexbox for layout design using udacity (Paid).</p>
+        <a href="https://www.udacity.com/course/front-end-web-developer-nanodegree--nd0011" class="btn go-to-course-btn">Go to Course</a>
+    </div>
+</div>
+</div>
+
+
+<div class="col-md-3 course-card" data-category="css" data-type="paid">
+<div class="card">
+    <img src="udemy.jpeg" class="card-img-top" alt="Course Image">
+    <div class="card-body">
+        <h5 class="card-title">Udemy</h5>
+        <p class="card-text">help from udemy (Paid).</p>
+        <a href="https://www.udemy.com/courses/search/?q=css&src=sac&kw=Css" class="btn go-to-course-btn">Go to Course</a>
+    </div>
+</div>
+</div>
+<div class="col-md-3 course-card" data-category="css" data-type="paid">
+<div class="card">
+    <img src="edx.jpeg" class="card-img-top" alt="Course Image">
+    <div class="card-body">
+        <h5 class="card-title">EDX</h5>
+        <p class="card-text">A deep dive into CSS Flexbox for layout design (Paid).</p>
+        <a href="https://www.edx.org/search?q=Css" class="btn go-to-course-btn">Go to Course</a>
+    </div>
+</div>
+</div>
+<div class="col-md-3 course-card" data-category="css" data-type="paid">
+<div class="card">
+    <img src="coursera.jpeg" class="card-img-top" alt="Course Image">
+    <div class="card-body">
+        <h5 class="card-title">Coursera</h5>
+        <p class="card-text">A deep dive into CSS Flexbox for layout design with coursera (Paid).</p>
+        <a href="https://www.coursera.org/search?query=css" class="btn go-to-course-btn">Go to Course</a>
+    </div>
+</div>
+</div>
+<div class="col-md-3 course-card" data-category="css" data-type="paid">
+<div class="card">
+    <img src="code.jpeg" class="card-img-top" alt="Course Image">
+    <div class="card-body">
+        <h5 class="card-title">Codecademy</h5>
+        <p class="card-text">A deep dive into CSS Flexbox for layout design with codecademy (Paid).</p>
+        <a href="https://www.codecademy.com/learn/learn-css" class="btn go-to-course-btn">Go to Course</a>
+    </div>
+</div>
+</div>
+<div class="col-md-3 course-card" data-category="css" data-type="paid">
+<div class="card">
+    <img src="plurals.jpeg" class="card-img-top" alt="Course Image">
+    <div class="card-body">
+        <h5 class="card-title">pluralsights</h5>
+        <p class="card-text">A deep dive into CSS Flexbox for layout design  with pluralsights(Paid).</p>
+        <a href="https://www.pluralsight.com/search?q=Css" class="btn go-to-course-btn">Go to Course</a>
+    </div>
+</div>
+</div>
+<div class="col-md-3 course-card" data-category="css" data-type="paid">
+<div class="card">
+    <img src="linkedin.jpeg" class="card-img-top" alt="Course Image">
+    <div class="card-body">
+        <h5 class="card-title">Linkedin</h5>
+        <p class="card-text">Linkedin is here(Paid).</p>
+        <a href="https://www.linkedin.com/learning/search?keywords=Css&upsellOrderOrigin=default_guest_learning&trk=homepage-learning_learning-search-bar_search-submit" class="btn go-to-course-btn">Go to Course</a>
+    </div>
+</div>
+</div>
+<div class="col-md-3 course-card" data-category="css" data-type="paid">
+<div class="card">
+    <img src="tree.jpeg" class="card-img-top" alt="Course Image">
+    <div class="card-body">
+        <h5 class="card-title">teamtreehouse</h5>
+        <p class="card-text">tth gathered knowledge about css here(Paid).</p>
+        <a href="https://teamtreehouse.com/library/q:Css" class="btn go-to-course-btn">Go to Course</a>
+    </div>
+</div>
+</div>
+<div class="col-md-3 course-card" data-category="css" data-type="paid">
+<div class="card">
+    <img src="scrimba.jpeg" class="card-img-top" alt="Course Image">
+    <div class="card-body">
+        <h5 class="card-title">scrimba</h5>
+        <p class="card-text">A deep dive into CSS Flexbox for layout design  with scrimba(Paid).</p>
+        <a href="https://scrimba.com/t0css" class="btn go-to-course-btn">Go to Course</a>
+    </div>
+</div>
+</div>
+<div class="col-md-3 course-card" data-category="css" data-type="paid">
+<div class="card">
+    <img src="odin.jpeg" class="card-img-top" alt="Course Image">
+    <div class="card-body">
+        <h5 class="card-title">theodinproject</h5>
+        <p class="card-text">A deep dive into CSS Flexbox for layout design using theodinproject (Paid).</p>
+        <a href="https://www.theodinproject.com/paths/full-stack-javascript/courses/intermediate-html-and-css" class="btn go-to-course-btn">Go to Course</a>
+    </div>
+</div>
+</div>       
+<script>
+       
+    
+    document.addEventListener("DOMContentLoaded", function () {
+      const buttons = document.querySelectorAll(".filter-btn");
+      const courses = document.querySelectorAll(".course-card");
+      const heading = document.getElementById("courseHeading");
+  
+      buttons.forEach(button => {
+        button.addEventListener("click", () => {
+          const selectedType = button.getAttribute("data-type");
+  
+          // Update Heading
+          heading.textContent = selectedType === "free" ? "Free CSS Courses" : "Paid CSS Courses";
+  
+          // Show/Hide Courses
+          courses.forEach(course => {
+            const courseType = course.getAttribute("data-type");
+            if (courseType === selectedType) {
+              course.style.display = "block";
+            } else {
+              course.style.display = "none";
+            }
+          });
+        });
+      });
+    });
+  
+  
+      </script>
+  </body>
+  </html>
+  
