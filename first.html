@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>EdxLearn</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: pink; /* Deep Blue to Indigo */
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 64px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #ff00cc, #3333ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      
+    }
+
+    .quote {
+      font-size: 20px;
+      margin-bottom: 50px;
+      max-width: 600px;
+      padding: 0 20px;
+      line-height: 1.5;
+    }
+
+    .button-container {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .go-to-course-btn {
+      background: linear-gradient(135deg, #ff00cc, #3333ff);
+      color: white;
+      padding: 12px 28px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s ease, transform 0.2s ease;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .go-to-course-btn:hover {
+      background: linear-gradient(135deg, #ff66d9, #6666ff);
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎓 <span class="gradient-text">EdxLearn</span> 📘</h1>
+
+  <div class="quote">"Empowering minds, one course at a time. 💡🚀 Start your learning journey today!"</div>
+
+  <div class="button-container">
+    <a href="login.html" class="go-to-course-btn">Login</a>
+    <a href="register.html" class="go-to-course-btn">Register</a>
+    <a href="info.html" class="go-to-course-btn">Info</a> <!-- Changed About to Info -->
+  </div>
+
+</body>
+</html>
