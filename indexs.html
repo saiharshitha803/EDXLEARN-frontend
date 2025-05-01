@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EdxLearn UI</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #1f1f1f;
+      --tab-bg: #f1f3f5;
+      --tab-active: #fb79f0;
+    }
+
+    [data-theme="dark"] {
+      --bg-color: #1e1e1e;
+      --text-color: #f0f0f0;
+      --tab-bg: #2c2c2c;
+      --tab-active: #f841e9;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    
+
+    
+        .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+  background-color: rgb(222, 37, 222); /* <-- Add this line */
+  color: white; /* Optional: Makes text/icons visible on purple */
+     }
+
+    
+
+    .header-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .header-buttons i {
+      font-size: 1.2rem;
+      margin-left: 1rem;
+      cursor: pointer;
+      color: var(--text-color);
+    }
+
+    .search-box {
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the text horizontally */
+  background-color: var(--tab-bg);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  background-color:rgb(245, 77, 245);
+     }
+
+    
+
+    .tabs {
+      display: flex;
+      gap: 0.5rem;
+      margin: 0 1rem 1rem 1rem;
+      flex-wrap: wrap;
+    }
+
+    .tab {
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      background-color: var(--tab-bg);
+      cursor: pointer;
+    }
+
+    .tab.active {
+      background-color: var(--tab-active);
+      font-weight: bold;
+    }
+
+
+   
+
+.content-box {
+  margin: 4rem auto 2rem;
+  padding: 2rem;
+  border-radius: 12px;
+  background-color: rgb(245, 77, 245); /* Purple */
+  color:black;
+  max-width: 500px;
+  text-align: center;
+  display: none;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.content-box.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Glow on hover or touch */
+.content-box:hover,
+.content-box:active {
+  box-shadow: 0 0 10px 3px #b266ff;
+  border: 2px solid #e0b3ff;
+  transition: box-shadow 0.2s ease, border 0.2s ease;
+}
+
+
+/* Animate the Learn button */
+.learn-btn {
+  margin-top: 1rem;
+  padding: 0.5rem 1.5rem;
+  background-color: white;
+  color: #6a0dad;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Learn button animation on hover */
+.learn-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 8px 2px #fff, 0 0 10px 2px #c084fc;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+/* Footer style */
+.footer {
+  background-color: rgb(222, 37, 222);
+  color: black;
+  text-align: center;
+  padding: 0.7px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-top: auto;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(222, 37, 222);
+  color: white;
+  padding: 1rem 2rem;
+}
+
+.header-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 0.2rem;
+  align-items: center;
+}
+
+.header-buttons a, .header-buttons i {
+  color: black;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.header-buttons a:hover, .header-buttons i:hover {
+  color: #777671;
+}
+
+
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="header-title">EdxLearn</div>
+    <div class="header-buttons">
+      <a href="about.html" title="About">
+        <i class="fas fa-circle-info"></i>
+      </a>
+      <i id="theme-toggle" class="fas fa-moon" title="Toggle Theme"></i>
+      <a href="login.html" title="Logout">
+        <i class="fas fa-sign-out-alt"></i>
+      </a>
+    </div>
+  </div>
+  
+
+  <div class="search-box">
+    <span style="font-size: 1rem;">Welcome to EdxLearn — Explore your skills here!</span>
+  </div>
+  
+  <div class="tabs">
+    <div class="tab">HTML</div>
+    <div class="tab">CSS</div>
+    <div class="tab">JavaScript</div>
+    <div class="tab">PHP</div>
+    <div class="tab">Bootstrap</div>
+    <div class="tab">AI  </div>
+    <div class="tab">IT  </div>
+    <div class="tab">C  </div>
+    <div class="tab">Python</div>
+
+  </div>
+  
+ 
+  <div id="welcome-box" style="text-align: center; margin: 2rem 0;">
+    <h1 style="font-size: 2.8rem; font-weight: bold; background: linear-gradient(135deg, #ff00cc, #3333ff);">
+      Welcome to EdxLearn 🚀
+    </h1>
+    <p style="font-size: 1.4rem; color: #555;">
+      Explore courses. Master new skills. Start your journey today! 🌟
+    </p>
+  </div>
+  
+<!-- CSS -->
+<div id="css-content" class="content-box">
+  <p>CSS styles the web and brings your HTML to life with design.</p>
+  <button class="learn-btn" onclick="location.href='css-courses.html'">Learn CSS</button>
+</div>
+
+ <!-- HTML -->
+<div id="html-content" class="content-box">
+  <p>Learn the building blocks of the web with HTML!</p>
+  <button class="learn-btn" onclick="location.href='html-courses.html'">Learn HTML</button>
+</div>
+
+
+
+<!-- JavaScript -->
+<div id="javascript-content" class="content-box">
+  <p>Bring interactivity to your websites using JavaScript!</p>
+  <button class="learn-btn" onclick="location.href='javascript-courses.html'">Learn JavaScript</button>
+</div>
+
+<!-- PHP -->
+<div id="php-content" class="content-box">
+  <p>Master server-side scripting with PHP!</p>
+  <button class="learn-btn" onclick="location.href='php-courses.html'">Learn PHP</button>
+</div>
+
+<!-- jQuery -->
+<div id="jquery-content" class="content-box">
+  <p>Simplify your JavaScript with the power of jQuery.</p>
+  <button class="learn-btn" onclick="location.href='jquery-courses.html'">Learn jQuery</button>
+</div>
+
+<!-- Bootstrap -->
+<div id="bootstrap-content" class="content-box">
+  <p>Quickly design beautiful websites using Bootstrap framework.</p>
+  <button class="learn-btn" onclick="location.href='bootstrap-courses.html'">Learn Bootstrap</button>
+</div>
+
+<!-- AI -->
+<div id="ai-content" class="content-box">
+  <p>Explore the world of Artificial Intelligence and its applications.</p>
+  <button class="learn-btn" onclick="location.href='ai-courses.html'">Learn AI</button>
+</div>
+
+<!-- IT -->
+<div id="it-content" class="content-box">
+  <p>Learn IT fundamentals and prepare for certifications.</p>
+  <button class="learn-btn" onclick="location.href='it-courses.html'">Learn IT</button>
+</div>
+
+<!-- C -->
+<div id="c-content" class="content-box">
+  <p>Learn the powerful C programming language from scratch.</p>
+  <button class="learn-btn" onclick="location.href='c-courses.html'">Learn C</button>
+</div>
+
+<!-- Python -->
+<div id="python-content" class="content-box">
+  <p>Learn Python programming and build modern applications.</p>
+  <button class="learn-btn" onclick="location.href='python-courses.html'">Learn Python</button>
+</div>
+
+
+
+
+  <script>
+    const themeBtn = document.getElementById('theme-toggle');
+    const html = document.documentElement;
+
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    html.setAttribute('data-theme', savedTheme);
+    themeBtn.className = savedTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+
+    themeBtn.addEventListener('click', () => {
+      const current = html.getAttribute('data-theme');
+      const newTheme = current === 'light' ? 'dark' : 'light';
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      themeBtn.className = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+    });
+
+    const tabs = document.querySelectorAll('.tab');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+      });
+    });
+
+
+    
+
+
+    const bootstrapTab = document.querySelector('.tab.active');
+const bootstrapContent = document.getElementById('bootstrap-content');
+
+// Show the content when "HTML" tab is clicked
+document.querySelectorAll('.tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    if (tab.textContent.trim() === 'Bootstrap') {
+      bootstrapContent.classList.add('show');
+    } else {
+      bootstrapContent.classList.remove('show');
+    }
+  });
+});
+
+const aiTab = document.querySelector('.tab.active');
+const aiContent = document.getElementById('ai-content');
+
+// Show the content when "HTML" tab is clicked
+document.querySelectorAll('.tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    if (tab.textContent.trim() === 'AI') {
+      aiContent.classList.add('show');
+    } else {
+      aiContent.classList.remove('show');
+    }
+  });
+});
+const itTab = document.querySelector('.tab.active');
+const itContent = document.getElementById('it-content');
+
+// Show the content when "HTML" tab is clicked
+document.querySelectorAll('.tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    if (tab.textContent.trim() === 'IT') {
+      itContent.classList.add('show');
+    } else {
+      itContent.classList.remove('show');
+    }
+  });
+});
+const cTab = document.querySelector('.tab.active');
+const cContent = document.getElementById('c-content');
+
+// Show the content when "HTML" tab is clicked
+document.querySelectorAll('.tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    if (tab.textContent.trim() === 'C') {
+      cContent.classList.add('show');
+    } else {
+      cContent.classList.remove('show');
+    }
+  });
+});
+const pythonTab = document.querySelector('.tab.active');
+const pythonContent = document.getElementById('python-content');
+
+// Show the content when "HTML" tab is clicked
+document.querySelectorAll('.tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    if (tab.textContent.trim() === 'Python') {
+      pythonContent.classList.add('show');
+    } else {
+      pythonContent.classList.remove('show');
+    }
+  });
+});
+const  phpTab = document.querySelector('.tab.active');
+const phpContent = document.getElementById('php-content');
+
+// Show the content when "HTML" tab is clicked
+document.querySelectorAll('.tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    if (tab.textContent.trim() === 'PHP') {
+      phpContent.classList.add('show');
+    } else {
+      phpContent.classList.remove('show');
+    }
+  });
+});
+const javascriptTab = document.querySelector('.tab.active');
+const javascriptContent = document.getElementById('javascript-content');
+
+// Show the content when "HTML" tab is clicked
+document.querySelectorAll('.tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    if (tab.textContent.trim() === 'JavaScript') {
+      javascriptContent.classList.add('show');
+    } else {
+      javascriptContent.classList.remove('show');
+    }
+  });
+});
+const cssTab = document.querySelector('.tab.active');
+const cssContent = document.getElementById('css-content');
+
+// Show the content when "HTML" tab is clicked
+document.querySelectorAll('.tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    if (tab.textContent.trim() === 'CSS') {
+      cssContent.classList.add('show');
+    } else {
+      cssContent.classList.remove('show');
+    }
+  });
+});
+const htmlTab = document.querySelector('.tab.active');
+const htmlContent = document.getElementById('html-content');
+
+// Show the content when "HTML" tab is clicked
+document.querySelectorAll('.tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    if (tab.textContent.trim() === 'HTML') {
+      htmlContent.classList.add('show');
+    } else {
+      htmlContent.classList.remove('show');
+    }
+  });
+});
+const jqueryTab = document.querySelector('.tab.active');
+const jqueryContent = document.getElementById('jquery-content');
+
+// Show the content when "HTML" tab is clicked
+document.querySelectorAll('.tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    if (tab.textContent.trim() === 'jQuery') {
+      jqueryContent.classList.add('show');
+    } else {
+      jqueryContent.classList.remove('show');
+    }
+  });
+});
+
+
+const languagePairs = [
+  { btnId: '#html-content .learn-btn', boxId: 'html-options' },
+  { btnId: '#css-content .learn-btn', boxId: 'css-options' },
+  { btnId: '#javascript-content .learn-btn', boxId: 'javascript-options' },
+  { btnId: '#php-content .learn-btn', boxId: 'php-options' },
+  { btnId: '#jquery-content .learn-btn', boxId: 'jquery-options' },
+  { btnId: '#bootstrap-content .learn-btn', boxId: 'bootstrap-options' },
+  { btnId: '#c-content .learn-btn', boxId: 'c-options' },
+  { btnId: '#python-content .learn-btn', boxId: 'python-options' },
+  { btnId: '#it-content .learn-btn', boxId: 'it-options' },
+  { btnId: '#ai-content .learn-btn', boxId: 'ai-options' },
+];
+
+languagePairs.forEach(({ btnId, boxId }) => {
+  const button = document.querySelector(btnId);
+  const box = document.getElementById(boxId);
+
+  if (button && box) {
+    button.addEventListener('click', () => {
+      box.classList.toggle('show');
+    });
+  }
+});
+
+
+
+
+  function showOptions(language) {
+    const contentBox = document.getElementById(`${language}-content`);
+    const optionsBox = document.getElementById(`${language}-options`);
+
+    // Hide the first container
+    contentBox.classList.add('hidden');
+
+    // Show the second container
+    optionsBox.classList.remove('hidden');
+    optionsBox.classList.add('show');
+  }
+
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+  const tabs = document.querySelectorAll(".tab"); // <- updated to match your structure
+  const welcomeBox = document.getElementById("welcome-box");
+
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      if (welcomeBox) {
+        welcomeBox.style.display = "none"; // Instantly hide
+      }
+    });
+  });
+});
+tabs.forEach(tab => {
+  tab.addEventListener("click", () => {
+    if (welcomeBox) {
+      welcomeBox.style.transition = "opacity 0.5s ease";
+      welcomeBox.style.opacity = "0";
+      setTimeout(() => {
+        welcomeBox.style.display = "none";
+      }, 500);
+    }
+  });
+});
+
+
+
+</script>
+
+
+<footer class="footer">
+  <p>&copy; 2025 EdxLearn. All rights reserved.</p>
+</footer>
+
+
+
+  
+
+</body>
+</html>  
