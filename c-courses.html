@@ -12,7 +12,31 @@
         .course-card {
             margin-bottom: 20px;
         }
-      
+        
+        :root {
+      --bg-color: #ffffff;
+      --text-color: #1f1f1f;
+      --tab-bg: #f1f3f5;
+      --tab-active: #fb79f0;
+    }
+
+    [data-theme="dark"] {
+      --bg-color: #1e1e1e;
+      --text-color: #f0f0f0;
+      --tab-bg: #2c2c2c;
+      --tab-active: #f841e9;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+
     
     .go-to-course-btn {
     background: linear-gradient(135deg, #ff00cc, #3333ff); /* Pink to Purple gradient */
@@ -32,10 +56,7 @@
     background: linear-gradient(135deg, #ff66d9, #6666ff); /* Lighter on hover */
     transform: scale(1.05); /* Small zoom effect */
   }
-
-
-
-      
+  
 .header {
   display: flex;
   justify-content: space-between;
@@ -67,7 +88,6 @@
 .header-buttons a:hover, .header-buttons i:hover {
   color: #7c7b75; /* Gold hover */
 }
-
 
     </style>
 </head>

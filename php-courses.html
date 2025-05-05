@@ -14,6 +14,31 @@
             margin-bottom: 20px;
         }
         
+        :root {
+      --bg-color: #ffffff;
+      --text-color: #1f1f1f;
+      --tab-bg: #f1f3f5;
+      --tab-active: #fb79f0;
+    }
+
+    [data-theme="dark"] {
+      --bg-color: #1e1e1e;
+      --text-color: #f0f0f0;
+      --tab-bg: #2c2c2c;
+      --tab-active: #f841e9;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+
+    
     .go-to-course-btn {
     background: linear-gradient(135deg, #ff00cc, #3333ff); /* Pink to Purple gradient */
     color: white;
@@ -32,10 +57,8 @@
     background: linear-gradient(135deg, #ff66d9, #6666ff); /* Lighter on hover */
     transform: scale(1.05); /* Small zoom effect */
   }
-
-
-   
-  .header {
+  
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -66,7 +89,6 @@
 .header-buttons a:hover, .header-buttons i:hover {
   color: #7c7b75; /* Gold hover */
 }
-
 
     </style>
 </head>
@@ -426,26 +448,23 @@
       });
     });
   
+    
     const themeBtn = document.getElementById('theme-toggle');
-const html = document.documentElement;
-const aboutBtn = document.getElementById('about-btn');
-const aboutModal = document.getElementById('about-modal');
-const closeModal = document.getElementById('close-modal');
+    const html = document.documentElement;
 
-// Load saved theme
-const savedTheme = localStorage.getItem('theme') || 'light';
-html.setAttribute('data-theme', savedTheme);
-themeBtn.className = savedTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    html.setAttribute('data-theme', savedTheme);
+    themeBtn.className = savedTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
 
-// Theme toggle click
-themeBtn.addEventListener('click', () => {
-  const current = html.getAttribute('data-theme');
-  const newTheme = current === 'light' ? 'dark' : 'light';
-  html.setAttribute('data-theme', newTheme);
-  localStorage.setItem('theme', newTheme);
-  themeBtn.className = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
-});
+    themeBtn.addEventListener('click', () => {
+      const current = html.getAttribute('data-theme');
+      const newTheme = current === 'light' ? 'dark' : 'light';
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      themeBtn.className = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+    });
 
+  
       </script>
   </body>
   </html>
